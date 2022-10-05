@@ -1,0 +1,32 @@
+.cities{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+.sections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+}
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+.city__links{
+    list-style: none;
+}
+.city__links li{
+    display: inline-block;
+    padding: 0px 70px;
+}
+.section__links{
+    list-style: none;
+}
+.section__links li{
+    display: inline-block;
+    padding: 0px 60px;
+}
+.calanderBody{
+    margin-top:2%;
+}

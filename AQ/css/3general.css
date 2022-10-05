@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Grape Nuts', cursive;
+}
+:root {
+    --primary-color: #2380C4;
+    --secondary-color: #FFFFFF;
+    --tertiary-color: #E03E4C;
+    --quaternary-color: #585757;
+    --hover-color:rgba(225,225,225,.3);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+li,a,button{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--quaternary-color)
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2% 10px 2%;
+    background-color: var(--secondary-color);
+}
+.logo{
+    cursor: pointer;
+}
+
+.nav__links{
+    list-style: none;
+}
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+.nav__links li a:hover{
+    color: #2380C4;
+}
+button{
+    padding: 9px 25px;
+    background-color: rdba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: rdba(0,136,169,0.8);
+}
+.contentContainer{
+    width:100%;
+    height: 94vh;
+    background-color: var(--primary-color);
+}
+
+
+.view{
+    margin: auto;
+    width: 99%;
+    height: 98%;
+    border: 3px solid var(--quaternary-color);
+    border-radius: 14px;
+    background-color: var(--secondary-color);
+    padding-top: 10px;
+}
+
+.calendar{
+    float: left;
+    width: 80%;
+    height: 90%;
+}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+    padding: 40px 25px;
+    width: 95%;
+    /*background: #1abc9c;*/
+    background: white;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+    width: 95%;
+}
+
+.month ul li {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+    width: 95%;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: left;
+}
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+.days button{
+    border-radius: 2px;
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    height: 12vh;
+    text-align: left;
+    font-size:12px;
+    color: #666;
+    border: 3px solid blue;
+
+}
+aside{
+    background-color: lightgrey;
+    height: 90%;
+    margin: 40px;
+    float: right;
+}
+aside div{
+    padding: 10px;
+}
+.values{
+    padding: 10px;
+}
+.values div{
+    display: inline-flex;
+    padding: 10px;
+}
+.square1{
+    border: 3px solid var(--quaternary-color);
+    background-color: lightgreen;
+
+
+}
+.square2{
+    border: 3px solid var(--quaternary-color);
+    background-color: lightgrey;
+}
+.square3{
+    border: 3px solid var(--quaternary-color);
+    background-color: #b02a37;
+}
+.viewES{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.calendar{
+    width:70vh;
+}
+.aside{
+    
+    width:20vh;
+    height: 80%;
+}
+.calanderBody{
+    margin-bottom: 20%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 140vh;
+}
