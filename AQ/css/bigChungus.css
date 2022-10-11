@@ -1,22 +1,8 @@
-/* total time: 02:43 */
 /* <link rel="stylesheet" href="../../css/bigChungus.css"/> 
 <link rel="stylesheet" href="bigChungus.css"/> */
 
-/* loginpage.css */
-.header img{
-    padding: 7vh 0px;
-    max-width: 600px;
-}
-.txt_feild{
-    padding:0vh 0px 2vh 0px;
-}
-.container{
-    padding:5vh 0px 13vh 0px; 
-}
-
 /* LoginGeneral.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
-
 *{
     box-sizing: border-box;
     font-family: 'Grape Nuts', cursive;
@@ -49,7 +35,7 @@ button{
 button:hover{
     background-color: rdba(0,136,169,0.5);
 }
-.contentContainer{
+.contentContainerGORGON{
     width:100%;
     height: 100vh;
     background-color: var(--primary-color);
@@ -57,10 +43,12 @@ button:hover{
 .txt_feild{
     display:flex;
     flex-direction: column;
+
 }
 .txt_feild label{
     color: rgba(224,62,76,.69);
     font-weight: 600;
+
 }
 .txt_feild input {
     width: 35vh;
@@ -87,7 +75,7 @@ button:hover{
     margin-bottom:10px;
     font-size: 14px;
 }
-.view{
+.viewGORGON{
     margin: 0;
     position: absolute;
     top: 50%;
@@ -105,7 +93,7 @@ button:hover{
     width: 30vh;
     text-align: center
 }
-.container{
+.containerGORGON{
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -113,6 +101,18 @@ button:hover{
 .header{
     display:flex;
     justify-content: center;
+}
+
+/* loginpage.css */
+.header img{
+    padding: 7vh 0px;
+    max-width: 600px;
+}
+.txt_feild{
+    padding:0vh 0px 2vh 0px;
+}
+.containerGORGON{
+    padding:5vh 0px 13vh 0px; 
 }
 
 /* EmployeeVerification.css */
@@ -130,7 +130,7 @@ button:hover{
 .txt_feild{
     padding:0vh 0px 1.5vh 0px;
 }
-.container{
+.containerGORGON{
     padding:0vh 0px 5vh 0px; 
 }
 
@@ -149,7 +149,7 @@ button:hover{
 .txt_feild{
     padding:0vh 0px 1.5vh 0px;
 }
-.container{
+.containerGORGON{
     padding:0vh 0px 5vh 0px; 
 }
 .image{
@@ -158,11 +158,12 @@ button:hover{
     align-items: center;
     padding:0vh 0px 5vh 0px; 
 }
-.text{
+.textGORGON{
     width: 55vh;
     text-align: center;
     font-weight: bold;
     padding:0vh 0px 2.5vh 0px; 
+
 }
 
 /* accountCreated.css */
@@ -174,7 +175,8 @@ button:hover{
     padding: 7vh 0px;
     max-width: 600px;
 }
-.container{
+
+.containerGORGON{
     padding:8vh 0px 9vh 0px; 
 }
 .text{
@@ -183,8 +185,9 @@ button:hover{
     font-size: 13pt;
     font-weight: bold;
     padding:0vh 0px 10vh 0px; 
+
 }
-.container a{
+.containerGORGON a{
     font-weight: bold;
 }
 
@@ -193,18 +196,20 @@ button:hover{
     padding: 7vh 0px;
     max-width: 600px;
 }
+
 .buttonPadding{
     padding:25px
 }
 .txt_feild{
     padding:0vh 0px 2vh 0px;
 }
-.container{
+.containerGORGON{
     padding:0vh 0px 10vh 0px; 
 }
 
-/* 3general.css */
+/* general.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+
 *{
     box-sizing: border-box;
     font-family: 'Grape Nuts', cursive;
@@ -229,7 +234,7 @@ li,a,button{
 }
 header{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     padding: 10px 2% 10px 2%;
     background-color: var(--secondary-color);
@@ -237,12 +242,13 @@ header{
 .logo{
     cursor: pointer;
 }
+
 .nav__links{
     list-style: none;
 }
 .nav__links li{
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0xp 20px;
 }
 .nav__links li a{
     transition: all 0.3s ease 0s;
@@ -250,7 +256,7 @@ header{
 .nav__links li a:hover{
     color: #2380C4;
 }
-button{
+header button{
     padding: 9px 25px;
     background-color: rdba(0,136,169,1);
     border: none;
@@ -266,7 +272,15 @@ button:hover{
     height: 94vh;
     background-color: var(--primary-color);
 }
-.view{
+button{
+    padding: 9px 25px;
+    background-color: rdba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.viewBLORP{
     margin: auto;
     width: 99%;
     height: 98%;
@@ -275,128 +289,46 @@ button:hover{
     background-color: var(--secondary-color);
     padding-top: 10px;
 }
-.calendar{
-    float: left;
-    width: 80%;
-    height: 90%;
-}
 ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-/* Month header */
-.month {
-    padding: 40px 25px;
-    width: 95%;
-    /*background: #1abc9c;*/
-    background: white;
-    text-align: center;
+
+/* avalability.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+
+.title{
+    height: 19vh;
 }
-/* Month list */
-.month ul {
-    margin: 0;
-    padding: 0;
-    width: 95%;
+.title h1{
+    font-weight: 100;
+    padding: 5vh 8vh;
+
 }
-.month ul li {
-    color: black;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+.avalability{
+    padding: 2vh 4vh;
+    flex-direction: column;
+    height: 20vh;
 }
-/* Previous button inside month header */
-.month .prev {
-    float: left;
-    padding-top: 10px;
-}
-/* Next button */
-.month .next {
-    float: right;
-    padding-top: 10px;
-}
-/* Weekdays (Mon-Sun) */
-.weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color:#ddd;
-    width: 95%;
-}
-.weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: #666;
-    text-align: left;
-}
-.days {
-    display: flex;
-    flex-wrap: wrap;
-}
-.days button{
-    border-radius: 2px;
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    height: 12vh;
-    text-align: left;
-    font-size:12px;
-    color: #666;
-    border: 3px solid blue;
-}
-aside{
-    background-color: lightgrey;
-    height: 90%;
-    margin: 40px;
-    float: right;
-}
-aside div{
-    padding: 10px;
-}
-.values{
-    padding: 10px;
-}
-.values div{
-    display: inline-flex;
-    padding: 10px;
-}
-.square1{
-    border: 3px solid var(--quaternary-color);
-    background-color: lightgreen;
-}
-.square2{
-    border: 3px solid var(--quaternary-color);
-    background-color: lightgrey;
-}
-.square3{
-    border: 3px solid var(--quaternary-color);
-    background-color: #b02a37;
-}
-.viewES{
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-}
-.calendar{
-    width:70vh;
-}
-.aside{
-    width:20vh;
-    height: 80%;
-}
-.calanderBody{
-    margin-bottom: 20%;
-    position:relative;
+.a{
     display:flex;
-    justify-content: center;
-    align-items: center;
-    height: 85%;
-    width: 140vh;
+    padding: 1vh 5vh;
+}
+input{
+    margin-left: 2vh;
+}
+.a tag{
+    margin-left: 1vh;
 }
 
+
 /* calander.css */
+
 .calander{
     width: 100%;
     padding: 0vh 2vh;
     box-shadow:0 5px 50px rgba(0,0,0,0,.5);
+    
     overflow: hidden;
 }
+
 .month h3{
     margin: 0;
     font-weight: 500;
@@ -409,6 +341,7 @@ aside div{
 /*this is each box in the calander*/
 .calander__date{
     display:flex;
+    
    /* width:180vh*/
 }
 .Calender__day{
@@ -420,8 +353,10 @@ aside div{
     color: #262626;
     border: 2px solid black;
     width:  14%;
+
 }
 .calander__number{
+    
     color: #262626;
     width: 14%;
     height: 40vh;
@@ -435,6 +370,7 @@ background-color: rgba(224, 62, 76, 0.666);    font-weight: 1000;
     background-color: #bfbfbf;
     color:rgb(0, 0, 0);
     font-weight: 1000;
+
     cursor: pointer;
     width: 14%;
     height: 40vh;
@@ -447,6 +383,7 @@ background-color: rgba(224, 62, 76, 0.666);    font-weight: 1000;
     height: 25px;
     color: #262626;
     width: 14%;
+
     height: 40vh;
     border: 2px solid black;
     background-color: #838383;
@@ -457,8 +394,10 @@ nav li{
 }
 .weekdiv{
     width:100%;
+    
 }
 .full_calander__number{
+    
     color: #262626;
     width: 14%;
     height: 10vh;
@@ -472,6 +411,7 @@ background-color: rgba(224, 62, 76, 0.666);    font-weight: 1000;
     background-color: #bfbfbf;
     color:rgb(0, 0, 0);
     font-weight: 1000;
+
     cursor: pointer;
     width: 14%;
     height: 10vh;
@@ -483,6 +423,7 @@ background-color: rgba(224, 62, 76, 0.666);    font-weight: 1000;
     justify-content: center;
     color: #262626;
     width: 14%;
+
     height: 10vh;
     border: 2px solid black;
     background-color: #838383;
@@ -490,15 +431,13 @@ background-color: rgba(224, 62, 76, 0.666);    font-weight: 1000;
 .full_calander__date{
     display:flex;
     flex-direction:column;
+    
    /* width:180vh*/
 }
 .week_div{
     display:flex;
     flex-direction:row;
 }
-/* .employee_view{
-    
-} */
 .red{
     background-color: #ae4545;
 }
@@ -543,18 +482,19 @@ header{
 .logo{
     cursor: pointer;
 }
-.nav__links{
+
+.nav__linksASDF{
     list-style: none;
 }
-.nav__links li{
+.nav__linksASDF li{
     display: inline-block;
     padding: 0px 20px;
 }
-.nav__links li a{
+.nav__linksASDF li a{
     transition: all 0.3s ease 0s;
     color: #585757;
 }
-.nav__links li a:hover{
+.nav__linksASDF li a:hover{
     color: #2380C4;
 }
 button{
@@ -569,12 +509,13 @@ button{
 button:hover{
     background-color: rgb(0,136,169,0.8);
 }
-.contentContainer{
+.contentContainerASDF{
     width:100%;
     height: 94vh;
     background-color: var(--primary-color);
 }
-.view{
+
+.viewASDF{
     margin: auto;
     width: 99%;
     height: 98%;
@@ -585,6 +526,7 @@ button:hover{
     padding-left: 2%;
     padding-right: 5%;
 }
+
 .messageCont{
     width: 99.5%;
     height: 15%;
@@ -596,6 +538,7 @@ button:hover{
     float: left;
     padding-left: 15%;
 }
+
 .profileImg{
     padding-right: 20px;
     float: left;
@@ -603,13 +546,15 @@ button:hover{
 .paddingMeBoyMeBob{
     padding: 0.5% 0%
 }
+
 .middleMessage{
     border-top: 2px solid darkgray;
     border-bottom: 2px solid darkgray;
 }
 
-/* general.css */
+/* 3general.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+
 *{
     box-sizing: border-box;
     font-family: 'Grape Nuts', cursive;
@@ -634,7 +579,7 @@ li,a,button{
 }
 header{
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     padding: 10px 2% 10px 2%;
     background-color: var(--secondary-color);
@@ -642,12 +587,13 @@ header{
 .logo{
     cursor: pointer;
 }
+
 .nav__links{
     list-style: none;
 }
 .nav__links li{
     display: inline-block;
-    padding: 0xp 20px;
+    padding: 0px 20px;
 }
 .nav__links li a{
     transition: all 0.3s ease 0s;
@@ -655,7 +601,7 @@ header{
 .nav__links li a:hover{
     color: #2380C4;
 }
-header button{
+button{
     padding: 9px 25px;
     background-color: rdba(0,136,169,1);
     border: none;
@@ -671,14 +617,8 @@ button:hover{
     height: 94vh;
     background-color: var(--primary-color);
 }
-button{
-    padding: 9px 25px;
-    background-color: rdba(0,136,169,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
+
+
 .view{
     margin: auto;
     width: 99%;
@@ -688,35 +628,137 @@ button{
     background-color: var(--secondary-color);
     padding-top: 10px;
 }
-ul {list-style-type: none;}
 
-/* avalability.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
-.title{
-    height: 19vh;
+.calendar{
+    float: left;
+    width: 80%;
+    height: 90%;
 }
-.title h1{
-    font-weight: 100;
-    padding: 5vh 8vh;
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+    padding: 40px 25px;
+    width: 95%;
+    /*background: #1abc9c;*/
+    background: white;
+    text-align: center;
 }
-.avalability{
-    padding: 2vh 4vh;
-    flex-direction: column;
-    height: 20vh;
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+    width: 95%;
 }
-.a{
+
+.month ul li {
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+    width: 95%;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: left;
+}
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+.days button{
+    border-radius: 2px;
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    height: 12vh;
+    text-align: left;
+    font-size:12px;
+    color: #666;
+    border: 3px solid blue;
+
+}
+aside{
+    background-color: lightgrey;
+    height: 90%;
+    margin: 40px;
+    float: right;
+}
+aside div{
+    padding: 10px;
+}
+.values{
+    padding: 10px;
+}
+.values div{
+    display: inline-flex;
+    padding: 10px;
+}
+.square1{
+    border: 3px solid var(--quaternary-color);
+    background-color: lightgreen;
+
+
+}
+.square2{
+    border: 3px solid var(--quaternary-color);
+    background-color: lightgrey;
+}
+.square3{
+    border: 3px solid var(--quaternary-color);
+    background-color: #b02a37;
+}
+.viewES{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.calendar{
+    width:70vh;
+}
+.aside{
+    
+    width:20vh;
+    height: 80%;
+}
+.calanderBody{
+    margin-bottom: 20%;
+    position:relative;
     display:flex;
-    padding: 1vh 5vh;
-}
-input{
-    margin-left: 2vh;
-}
-.a tag{
-    margin-left: 1vh;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 140vh;
 }
 
 /* TempCalendar.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
+
+
 .calendar{
     margin: auto;
     width: 70%;
@@ -724,6 +766,7 @@ input{
 }
 ul {list-style-type: none;}
 body {font-family: Verdana, sans-serif;}
+
 /* Month header */
 .month {
     padding: 5px;
@@ -732,33 +775,39 @@ body {font-family: Verdana, sans-serif;}
     background: white;
     text-align: center;
 }
+
 /* Month list */
 .month ul {
     margin: 0;
     padding: 0;
 }
+
 .month ul li {
     color: black;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
+
 /* Previous button inside month header */
 .month .prev {
     float: left;
     padding-top: 10px;
 }
+
 /* Next button */
 .month .next {
     float: right;
     padding-top: 10px;
 }
+
 /* Weekdays (Mon-Sun) */
 .weekdays {
     margin: 0;
     padding: 10px 0;
     background-color:#ddd;
 }
+
 .weekdays li {
     display: inline-block;
     width: 13.6%;
@@ -781,6 +830,7 @@ body {font-family: Verdana, sans-serif;}
     font-size:12px;
     color: #666;
     border: 3px solid blue;
+
 }
 aside{
     background-color: #b02a37;
@@ -794,6 +844,7 @@ aside div{
 }
 .values{
     float: left;
+
 }
 .values li{
     display: inline;
@@ -832,3 +883,10 @@ hr.solid {
 .calanderBody{
     margin-top:2%;
 }
+
+/* profile.html's .css */
+.profile {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
