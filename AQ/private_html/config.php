@@ -4,20 +4,20 @@
 #
 $tmp = explode(DIRECTORY_SEPARATOR, __DIR__);
 unset($tmp[count($tmp)-1]);
-define('BASE_PATH', config.phpimplode(DIRECTORY_SEPARATOR, $tmp));
-define('PUBLIC_HTML', BASE_PATH . 'public_html/');
-define('WEB_URL', "http://localhost/FinalProject/public_html");
+define('BASE_PATH', implode(DIRECTORY_SEPARATOR, $tmp) . DIRECTORY_SEPARATOR);
+define('PUBLIC_PATH', BASE_PATH . 'public_html/');
+define('WEB_URL', "http://localhost/public_html/");
 #
 # Set PHP configuration options
-define('CLASS_ROOT', BASE_PATH . 'public_html/class/');
+define('CLASS_ROOT', PUBLIC_PATH . 'class/');
 #
 # Set common constants
 define('PRIVATE_PATH', BASE_PATH . 'private_html/');
 #
 # Set Smarty constants
-define('SMARTY_ROOT', PUBLIC_HTML . 'libs/smarty-4.2.1/');
-define('SMARTY_TEMPLATES', PUBLIC_HTML . 'templates/');
-define('SMARTY', SMARTY_ROOT . 'libs/Smarty.class.php');
+define('SMARTY_ROOT', PUBLIC_PATH . 'libs/smarty-4.2.1/');
+define('SMARTY_TEMPLATES', PUBLIC_PATH . 'templates/');
+define('SMARTY', SMARTY_ROOT . 'lib/Smarty.class.php');
 /*
  * The following has been added to resolve the problem of relying on the system's timezone settings.
  */

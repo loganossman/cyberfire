@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-10-12 20:46:24
+  from 'C:\Apache24\htdocs\public_html\templates\editProfile.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_63475fe03799c6_96062128',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '78b6c0dd883e07d7a0735d4338cc32d689708bc1' => 
+    array (
+      0 => 'C:\\Apache24\\htdocs\\public_html\\templates\\editProfile.tpl',
+      1 => 1665621766,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_63475fe03799c6_96062128 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,12 +31,14 @@
     <link rel="stylesheet" href="css/bigChungus.css" />
 </head>
 <body class ="body1">
-<script>
+<?php echo '<script'; ?>
+>
   var loadFile = function (event) {
     var image = document.getElementById("picture");
     image.src = URL.createObjectURL(event.target.files[0]);
   };
-</script>
+<?php echo '</script'; ?>
+>
   <div class="container">
     <div class="row gutters">
       <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
@@ -110,4 +135,5 @@
     </div>
   </div>
 </body>
-</html>
+</html><?php }
+}

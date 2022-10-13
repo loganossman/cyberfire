@@ -2,7 +2,7 @@
 /*
  * @var $smarty defined in config.php
  */
-include "../Private_html/config.php";
+include "../private_html/config.php";
 
 if (isset($_POST['submit'])){
     $email = $_POST['email'];
@@ -31,7 +31,8 @@ if (isset($_POST['submit'])){
     }else if(!preg_match('/^[0-9]{5}+$/', $zip)) {
         echo '<script>alert("Invalid zip code")</script>';
     }else{
-        echo '<script>alert("Update successfully submitted")</script>';
+        header("Location: success.php");
+        exit();
     }
 }
 
