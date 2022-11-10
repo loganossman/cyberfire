@@ -14,7 +14,7 @@
             <div class = "containerGORGON">
                 <h1>Congrats, your password has been changed!</h1>
                 <div class="New">
-                    <a href="login.php" style="text-decoration: none;"><span style="color: rgba(224,62,76,.69)">Submit</span></a>
+                    <a href="login.php" style="text-decoration: none;"><span style="color: rgba(224,62,76,.69)">Return to Login</span></a>
                 </div>
             </div>
             

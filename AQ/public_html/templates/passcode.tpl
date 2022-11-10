@@ -12,13 +12,13 @@
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
             <div class = "containerGORGON">
+                <h1>Enter the Passcode sent to Your Email</h1>
                 <div class =" txt_feild">
-                    <h1>Enter the Passcode sent to Your Email</h1>
                     <input type="email" required>
                 </div>
-            </div>
-            <div class="New">
+                <div class="New">
                     <a href="passwordReEntry.php" style="text-decoration: none;"><span style="color: rgba(224,62,76,.69)"> Check Passcode</span></a>
+                </div>
             </div>
             <div class = "footer">
 
