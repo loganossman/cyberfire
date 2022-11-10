@@ -12,7 +12,9 @@
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
             <div class = "containerGORGON">
-
+                <h1>Congrats, your password has been changed!</h1>
+                <div class="New">
+                    <a href="login.php" style="text-decoration: none;"><span style="color: rgba(224,62,76,.69)">Submit</span></a>
                 </div>
             </div>
             
