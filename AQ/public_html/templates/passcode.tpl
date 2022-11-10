@@ -17,6 +17,9 @@
                     <input type="email" required>
                 </div>
             </div>
+            <div class="New">
+                    <a href="passwordReEntry.php" style="text-decoration: none;"><span style="color: rgba(224,62,76,.69)"> Check Passcode</span></a>
+            </div>
             <div class = "footer">
 
             </div>
