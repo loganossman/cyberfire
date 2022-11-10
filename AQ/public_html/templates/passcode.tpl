@@ -12,7 +12,10 @@
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
             <div class = "containerGORGON">
-
+                <div class =" txt_feild">
+                    <h1>Enter the Passcode sent to Your Email</h1>
+                    <input type="email" required>
+                </div>
             </div>
             <div class = "footer">
 
