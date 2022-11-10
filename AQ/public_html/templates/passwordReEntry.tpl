@@ -14,11 +14,11 @@
             <div class = "containerGORGON">
                 <div class =" txt_feild">
                     <label>Enter Password*</label>
-                    <input type="email" required>
+                    <input type="email" name="passwordOne" required>
                 </div>
                 <div class =" txt_feild">
                     <label>Re-Enter Password*</label>
-                    <input type="password" required>
+                    <input type="password" name="passwordTwo" required>
                 <div class="New">
                     <a href="passwordChangeVerification.php" style="text-decoration: none;"><span style="color: rgba(224,62,76,.69)">Submit</span></a>
                 </div>

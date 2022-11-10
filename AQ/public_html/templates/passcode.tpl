@@ -14,7 +14,7 @@
             <div class = "containerGORGON">
                 <h1>Enter the Passcode sent to Your Email</h1>
                 <div class =" txt_feild">
-                    <input type="email" required>
+                    <input type="email" name="passcodeEntry" required>
                 </div>
                 <div class="New">
                     <a href="passwordReEntry.php" style="text-decoration: none;"><span style="color: rgba(224,62,76,.69)"> Check Passcode</span></a>
