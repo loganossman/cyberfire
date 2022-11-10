@@ -28,7 +28,7 @@
                     <a href="employeeVerification.php" style="text-decoration: none;">New Employee <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
                 <div class="New">
-                    <a href="employeeVerification.php" style="text-decoration: none;">Forgotten Password <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
+                    <a href="passwordReEntry.php" style="text-decoration: none;">Forgotten Password <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
             </div>
             <div class = "footer">
