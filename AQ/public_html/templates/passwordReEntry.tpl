@@ -11,7 +11,7 @@
             <div class="header">
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
-            <div class = "containerGORGON">
+            <form class = "containerGORGON" action="passwordReEntry" method="post">
                 <div class =" txt_feild">
                     <label>Enter Password*</label>
                     <input type="email" name="passwordOne" required>
@@ -19,10 +19,11 @@
                 <div class =" txt_feild">
                     <label>Re-Enter Password*</label>
                     <input type="password" name="passwordTwo" required>
+                </div>
                 <div class="New">
                     <a href="passwordChangeVerification.php" style="text-decoration: none;"><span style="color: rgba(224,62,76,.69)">Submit</span></a>
                 </div>
-            </div>
+            </form>
             <div class = "footer">
             </div>
         </div>

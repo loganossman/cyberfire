@@ -5,4 +5,9 @@
 
 include "../private_html/config.php";
 
-$smarty->display("passwordReEntry.tpl");
+ if(!isset($_POST['passwordOne'])){
+    $smarty->display("passwordReEntry.tpl");
+ }
+ elseif($_POST['passwordOne'] == $_POST['passwordTwo']){
+    $smarty->display("passwordChangeVerification.tpl");
+ }
