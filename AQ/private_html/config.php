@@ -6,7 +6,7 @@ $tmp = explode(DIRECTORY_SEPARATOR, __DIR__);
 unset($tmp[count($tmp)-1]);
 define('BASE_PATH', implode(DIRECTORY_SEPARATOR, $tmp) . DIRECTORY_SEPARATOR);
 define('PUBLIC_PATH', BASE_PATH . 'public_html/');
-define('WEB_URL', "http://localhost/public_html/");
+define('WEB_URL', "http://localhost/cyberfire/AQ/public_html/");
 #
 # Set PHP configuration options
 define('CLASS_ROOT', PUBLIC_PATH . 'class/');
