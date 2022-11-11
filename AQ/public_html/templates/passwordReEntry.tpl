@@ -14,7 +14,7 @@
             <form class = "containerGORGON" action="passwordReEntry.php" method="post">
                 <div class =" txt_feild">
                     <label>Enter Password*</label>
-                    <input type="email" name="passwordOne" required>
+                    <input type="password" name="passwordOne" required>
                 </div>
                 <div class =" txt_feild">
                     <label>Re-Enter Password*</label>
