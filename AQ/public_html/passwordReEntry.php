@@ -11,3 +11,6 @@ include "../private_html/config.php";
  elseif($_POST['passwordOne'] == $_POST['passwordTwo']){
     $smarty->display("passwordChangeVerification.tpl");
  }
+ else{
+    echo "Error: Passwords do not match";
+ }
