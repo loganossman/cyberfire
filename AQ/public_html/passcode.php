@@ -8,7 +8,7 @@ if(!isset($_POST["passcodeEntry"])){
     $smarty->display("passcode.tpl");
 }
 elseif($_POST["passcodeEntry"] == "185769"){
-    $smarty->display("passwordReEntry.php");
+    $smarty->display("passwordReEntry.tpl");
 }
 else{
     echo "this is not the code";

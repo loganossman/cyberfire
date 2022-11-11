@@ -20,9 +20,6 @@
                     <label>Re-Enter Password*</label>
                     <input type="password" name="passwordTwo" required>
                 </div>
-                <div class="New">
-                    <a href="passwordChangeVerification.php" style="text-decoration: none;"><span style="color: rgba(224,62,76,.69)">Submit</span></a>
-                </div>
                 <input type="submit">
             </form>
             <div class = "footer">
