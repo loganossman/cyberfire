@@ -7,7 +7,7 @@ if(!isset($_POST["passcodeEntry"])){
     mail("loganossman@gmail.com", "Egg", "Your passcode is 185769");
     $smarty->display("passcode.tpl");
 }
-elseif($_POST["passcodeEntry" == "185769"]){
+elseif($_POST["passcodeEntry"] == "185769"){
     $smarty->display("passwordReEntry.php");
 }
 else{
