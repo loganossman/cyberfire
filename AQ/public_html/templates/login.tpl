@@ -14,7 +14,7 @@
             <div class = "containerGORGON">
                 <div class =" txt_feild">
                     <label>Email*</label>
-                    <input type="email" required>
+                    <input type="email" name="email" required>
                 </div>
                 <div class =" txt_feild">
                     <label>Password*</label>
@@ -28,7 +28,7 @@
                     <a href="employeeVerification.php" style="text-decoration: none;">New Employee <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
                 <div class="New">
-                    <a href="passcode.php" style="text-decoration: none;">Forgotten Password <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
+                    <a href="loginToPasscode.php" style="text-decoration: none;">Forgotten Password <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
             </div>
             <div class = "footer">
