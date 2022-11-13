@@ -2,7 +2,10 @@
 /**
  * @var $smarty
  */
+
 include "../private_html/config.php";
+include PRIVATE_PATH."db.inc.php";
+
 if(!isset($_POST["passcodeEntry"])){
     mail("loganossman@gmail.com", "Egg", "Your passcode is 185769");
     $smarty->display("passcode.tpl");
