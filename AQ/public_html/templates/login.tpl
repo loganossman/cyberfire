@@ -11,7 +11,7 @@
             <div class="header">
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
-            <div class = "containerGORGON">
+            <form class = "containerGORGON">
                 <div class =" txt_feild">
                     <label>Email*</label>
                     <input type="email" name="email" required>
@@ -23,14 +23,14 @@
                 <div class="forgot">Admin static login <a href="houston.php" style="color: rgba(224,62,76,.69)">Click here!</a></div>
                 
                 <input class="button" onclick="window.location.href='EmployeeSchedule.php';" type="submit" value="Login"> </input>
-
+                
                 <div class="New">
                     <a href="employeeVerification.php" style="text-decoration: none;">New Employee <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
                 <div class="New">
                     <a href="loginToPasscode.php" style="text-decoration: none;">Forgotten Password <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
-            </div>
+            </form>
             <div class = "footer">
                 <p>
                     If you are have trouble logging in please try resetting password.
