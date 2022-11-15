@@ -11,7 +11,7 @@
             <div class="header">
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
-            <form class = "containerGORGON">
+            <form class = "containerGORGON" action="../loginToPasscode.php" method="post">
                 <div class =" txt_feild">
                     <label>Email*</label>
                     <input type="email" name="email" required>
@@ -27,9 +27,8 @@
                 <div class="New">
                     <a href="employeeVerification.php" style="text-decoration: none;">New Employee <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
-                <div class="New">
-                    <a href="loginToPasscode.php" style="text-decoration: none;">Forgotten Password <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
-                </div>
+
+                <input class="button" type="submit" id="submit" name="submit" value="Login">
             </form>
             <div class = "footer">
                 <p>

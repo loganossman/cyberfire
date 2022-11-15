@@ -10,7 +10,7 @@ $sql = "SELECT username FROM employee WHERE username = :username;";
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['username' => $_POST["email"]]);
 $user = $stmt->fetch();
-if($POST["email"] == $user['username']){
+if($_POST["email"] == $user['username']){
     $_SESSION["username"] = $_POST["email"];
     $smarty->display("passcode.tpl");
 }
