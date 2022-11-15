@@ -1,6 +1,7 @@
 <?php
 /**
  * @var $smarty
+ * Egg
  */
 
 include "../private_html/config.php";
