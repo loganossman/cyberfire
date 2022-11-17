@@ -12,18 +12,19 @@
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
             <div class = "containerGORGON">
-                <div class =" txt_feild">
-                    <label>Email*</label>
-                    <input type="email" required>
-                </div>
-                <div class =" txt_feild">
-                    <label>Password*</label>
-                    <input type="password" required>
-                </div>
-                <div class="forgot">Admin static login <a href="houston.php" style="color: rgba(224,62,76,.69)">Click here!</a></div>
-                
-                <input class="button" onclick="window.location.href='EmployeeSchedule.php';" type="submit" value="Login"> </input>
-
+                <form action="loginForm.php" method="post">
+                    <div class =" txt_feild">
+                        <label>Email*</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class =" txt_feild">
+                        <label>Password*</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    <div class="forgot">Admin static login <a href="houston.php" style="color: rgba(224,62,76,.69)">Click here!</a></div>
+                    
+                    <input class="button" type="submit" id="submit" name="submit" value="Login">
+                </form>
                 <div class="New">
                     <a href="employeeVerification.php" style="text-decoration: none;">New Employee <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
