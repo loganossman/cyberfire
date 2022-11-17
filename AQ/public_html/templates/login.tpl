@@ -11,7 +11,7 @@
             <div class="header">
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
-            <form class = "containerGORGON" action="../loginToPasscode.php" method="post">
+            <form class = "containerGORGON" action="loginToPasscode.php" method="post">
                 <div class =" txt_feild">
                     <label>Email*</label>
                     <input type="email" name="email" required>
