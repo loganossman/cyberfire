@@ -8,9 +8,9 @@ include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
  if($_POST['passwordOne'] == $_POST['passwordTwo']){
-   $sql = "UPDATE username FROM employee WHERE username = :username;";
+   $sql = "UPDATE password FROM employee WHERE email = :email;";
    $stmt = $pdo->prepare($sql);
-   $stmt->execute(['username' => $_SESSION["email"]]);
+   $stmt->execute(['email' => $_SESSION["email"]]);
    $user = $stmt->fetch();
    $smarty->display("passwordChangeVerification.tpl");
  }
