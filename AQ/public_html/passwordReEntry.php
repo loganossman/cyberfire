@@ -16,8 +16,8 @@ include PRIVATE_PATH . "db.inc.php";
    $stmt = $pdo->prepare($sql);
    $stmt->execute($arguments);
    $user = $stmt->fetch();
-   echo($user);
    $smarty->display("passwordChangeVerification.tpl");
+   echo($user);
  }
  else{
     echo "Error: Passwords do not match";
