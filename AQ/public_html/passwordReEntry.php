@@ -8,7 +8,7 @@ include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
  if($_POST['passwordOne'] == $_POST['passwordTwo']){
-   $sql = "UPDATE employee SET employee=" . $_POST['passwordOne'] . "WHERE email = :email;";
+   $sql = "UPDATE employee SET password=" . $_POST['passwordOne'] . "WHERE email = :email;";
    $stmt = $pdo->prepare($sql);
    $stmt->execute(['email' => $_SESSION["email"]]);
    $user = $stmt->fetch();
