@@ -12,7 +12,9 @@ $stmt->execute(['email' => $_POST["email"]]);
 $user = $stmt->fetch();
 if($user){
     $_SESSION["username"] = $_POST["email"];
+    echo($user);
     $smarty->display("passcode.tpl");
+    echo($user);
 }
 else{
     echo '<script>alert("Please enter a valid email before continuing.")</script>';
