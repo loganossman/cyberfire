@@ -18,7 +18,6 @@ include PRIVATE_PATH . "db.inc.php";
    $user = $stmt->fetch();
    echo($stmt);
    $smarty->display("passwordChangeVerification.tpl");
-   echo($stmt);
  }
  else{
     echo "Error: Passwords do not match";
