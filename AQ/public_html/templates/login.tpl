@@ -28,7 +28,7 @@
                     <a href="employeeVerification.php" style="text-decoration: none;">New Employee <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
 
-                <input class="button" type="submit" id="submit" name="submit" value="Login">
+                <input class="button" type="submit" id="submit" name="submit" value="New Password">
             </form>
             <div class = "footer">
                 <p>
