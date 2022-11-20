@@ -9,14 +9,10 @@ include PRIVATE_PATH . "db.inc.php";
 
  if($_POST['passwordOne'] == $_POST['passwordTwo']){
    $sql = "UPDATE employee SET password= " . $_POST['passwordOne'] . " WHERE email = :email;";
-   $arguments = ['email'];
-   $arguments['email'] = $_SESSION['username'];
    $stmt = $pdo->prepare($sql);
-   $stmt->execute($arguments);
+   $stmt->execute(['email' => $_SESSION['username']]);
    $user = $stmt->fetch();
-   echo($sql);
    $smarty->display("passwordChangeVerification.tpl");
-   echo($sql);
  }
  else{
     echo "Error: Passwords do not match";
