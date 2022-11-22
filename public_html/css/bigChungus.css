@@ -575,22 +575,31 @@ hr.solid {
     padding: 0px 60px;
 }
 /* profile.html's .css */
+
 .profile {
     max-width: 300px;
     margin: auto;
     text-align: center;
   }
 
+
 .body1 {
-    margin: 0;
-    padding-top: 13rem;
-    color: #2e323c;
+    padding-top: 3rem;
     background:  var(--primary-color);
     position: relative;
     height: 100%;
 }
+.card{
+    height: 635px;
+    background: white;
+    border: 3px solid black;
+}
+.card-body{
+    padding-top: 13rem;
+}
 .account-settings{
-    padding-top: 4rem;
+    padding-top: 12rem;
+    padding-right: 1.5rem;
 }
 .account-settings .user-profile {
     margin: 0 0 1rem 0;
@@ -610,6 +619,7 @@ hr.solid {
 }
 .account-settings .user-profile .user-avatar input {
     margin-top: 1rem;
+    margin-right: 1rem;
 }
 .account-settings .user-profile h5.user-name {
     margin: 0 0 0.5rem 0;
@@ -619,6 +629,7 @@ hr.solid {
     font-size: 0.8rem;
     font-weight: 400;
     color: #9fa8b9;
+
 }
 .account-settings .about {
     margin: 2rem 0 0 0;
