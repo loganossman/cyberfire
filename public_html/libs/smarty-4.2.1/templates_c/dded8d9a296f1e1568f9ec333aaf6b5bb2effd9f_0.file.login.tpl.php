@@ -1,3 +1,4 @@
+
 <?php
 /* Smarty version 4.2.1, created on 2022-11-17 16:06:23
   from 'C:\Apache24\htdocs\cyberfire\public_html\templates\login.tpl' */
