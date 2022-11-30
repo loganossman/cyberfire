@@ -12,25 +12,27 @@
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
             <div class = "containerGORGON">
-                <div class =" txt_feild">
-                    <label>First Name</label>
-                    <input type="firstName" required>
-                </div>
-                <div class =" txt_feild">
-                    <label>Last Name</label>
-                    <input type="lastName" required>
-                </div>
-                <div class =" txt_feild">
-                    <label>Date of Birth</label>
-                    <input type="DOB" required>
-                </div>
-                <div class =" txt_feild">
-                    <label>Enter Verification Password</label>
-                    <input type="password" required>
-                </div>
-                <div class="buttonPadding">
-                    <input class="button" onclick="window.location.href='accountCreate.php';" type="submit" value="Verify"> </input>
-                </div> 
+                <form action="empVerForm.php" method="post">
+                    <div class =" txt_feild">
+                        <label>First Name</label>
+                        <input type="firstName" id="firstName" name="firstName" class="form-control" required>
+                    </div>
+                    <div class =" txt_feild">
+                        <label>Last Name</label>
+                        <input type="lastName" id="lastName" name="lastName" class="form-control" required>
+                    </div>
+                    <div class =" txt_feild">
+                        <label>Date of Birth</label>
+                        <input type="date" id="DOB" name="DOB" class="form-control" required>
+                    </div>
+                    <div class =" txt_feild">
+                        <label>Enter Verification Password</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                    </div>
+                    <div class="buttonPadding">
+                        <input class="button" type="submit" id="submit" name="submit" value="Verify">
+                    </div> 
+                </form>
             </div>
             <div class = "footer">
                 <p>
