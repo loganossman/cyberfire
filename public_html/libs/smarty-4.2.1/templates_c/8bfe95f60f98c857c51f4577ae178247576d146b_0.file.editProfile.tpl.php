@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-21 11:17:25
+/* Smarty version 4.2.1, created on 2022-11-28 22:28:07
   from 'C:\Apache24\htdocs\cyberfire\public_html\templates\editProfile.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_637ba49566ba79_45827230',
+  'unifunc' => 'content_63857c47e87520_20753041',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8bfe95f60f98c857c51f4577ae178247576d146b' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\cyberfire\\public_html\\templates\\editProfile.tpl',
-      1 => 1669047398,
+      1 => 1669136029,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_637ba49566ba79_45827230 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63857c47e87520_20753041 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,44 +69,24 @@ function content_637ba49566ba79_45827230 (Smarty_Internal_Template $_smarty_tpl)
                       <label for="firstName">First Name</label>
                       <input type="text" class="form-control" id="firstName" placeholder="Enter first name" name="FirstName">
                     </div>
-                    <?php if ((isset($_smarty_tpl->tpl_vars['error']->value))) {?>
-                      <div class="alert alert-danger">
-                        Empty
-                      </div>
-                    <?php }?>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                       <label for="lastName">Last Name</label>
                       <input type="text" class="form-control" id="lastName" placeholder="Enter last name" name="LastName">
                     </div>
-                    <?php if ((isset($_smarty_tpl->tpl_vars['error1']->value))) {?>
-                      <div class="alert alert-danger">
-                        Empty
-                      </div>
-                    <?php }?>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                       <label for="eMail">Email</label>
                       <input type="email" class="form-control" id="eMail" placeholder="Enter email ID" name="email">
                     </div>
-                    <?php if ((isset($_smarty_tpl->tpl_vars['error2']->value))) {?>
-                      <div class="alert alert-danger">
-                        Empty
-                      </div>
-                    <?php }?>
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                      <label for="phone">Phone</label>
+                      <label for="phone">Username</label>
                       <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
                     </div>
-                    <?php if ((isset($_smarty_tpl->tpl_vars['error3']->value))) {?>
-                      <div class="alert alert-danger">
-                        Empty
-                      </div>
-                    <?php }?>
                   </div>
                 </div>
                 <div class="row gutters">
