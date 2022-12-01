@@ -31,10 +31,7 @@ include PRIVATE_PATH . "db.inc.php";
                     WHERE password = 'abcd' ";
             $stmt = $pdo->prepare($sql);
             $stmt->execute();
-//            header("Location: success.php");
-//            exit();
+            header("Location: success.php");
         }
-
-
     }
 $smarty-> display("editProfile.tpl");
