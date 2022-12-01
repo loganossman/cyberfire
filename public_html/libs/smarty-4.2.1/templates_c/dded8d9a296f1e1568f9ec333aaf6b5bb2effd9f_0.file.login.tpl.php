@@ -1,19 +1,18 @@
-
 <?php
-/* Smarty version 4.2.1, created on 2022-11-17 16:06:23
+/* Smarty version 4.2.1, created on 2022-12-01 13:02:48
   from 'C:\Apache24\htdocs\cyberfire\public_html\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6376a24f37d638_61608335',
+  'unifunc' => 'content_6388ec489b3d85_02622990',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dded8d9a296f1e1568f9ec333aaf6b5bb2effd9f' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\cyberfire\\public_html\\templates\\login.tpl',
-      1 => 1668718995,
+      1 => 1669917765,
       2 => 'file',
     ),
   ),
@@ -21,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6376a24f37d638_61608335 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6388ec489b3d85_02622990 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +43,10 @@ function content_6376a24f37d638_61608335 (Smarty_Internal_Template $_smarty_tpl)
                     <div class =" txt_feild">
                         <label>Password*</label>
                         <input type="password" id="password" name="password" class="form-control" required>
+                        <?php if ((isset($_smarty_tpl->tpl_vars['error']->value))) {?>
+                            <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+
+                        <?php }?>
                     </div>
                     <div class="forgot">Admin static login <a href="houston.php" style="color: rgba(224,62,76,.69)">Click here!</a></div>
                     

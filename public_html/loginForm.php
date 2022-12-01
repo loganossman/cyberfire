@@ -30,7 +30,8 @@ if (isset($_POST['submit'])) {
     if ($pass and $user) {
         $smarty->display("EmployeeSchedule.tpl");
     } else {
-        echo '<script>alert("Incorrect email or password")</script>';
+        //echo '<script>alert("Incorrect email or password")</script>';
+        $smarty->assign("error", "<p style=" . "color:red;" . ">Incorrect email or password!</p>");
         $smarty->display("login.tpl");
     }
 }

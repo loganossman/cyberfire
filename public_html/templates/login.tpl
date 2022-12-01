@@ -20,6 +20,9 @@
                     <div class =" txt_feild">
                         <label>Password*</label>
                         <input type="password" id="password" name="password" class="form-control" required>
+                        {if isset($error)}
+                            {$error}
+                        {/if}
                     </div>
                     <div class="forgot">Admin static login <a href="houston.php" style="color: rgba(224,62,76,.69)">Click here!</a></div>
                     
