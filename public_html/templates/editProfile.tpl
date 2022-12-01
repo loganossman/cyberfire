@@ -44,44 +44,24 @@
                       <label for="firstName">First Name</label>
                       <input type="text" class="form-control" id="firstName" placeholder="Enter first name" name="FirstName">
                     </div>
-                    {if isset($error)}
-                      <div class="alert alert-danger">
-                        Empty
-                      </div>
-                    {/if}
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                       <label for="lastName">Last Name</label>
                       <input type="text" class="form-control" id="lastName" placeholder="Enter last name" name="LastName">
                     </div>
-                    {if isset($error1)}
-                      <div class="alert alert-danger">
-                        Empty
-                      </div>
-                    {/if}
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                       <label for="eMail">Email</label>
                       <input type="email" class="form-control" id="eMail" placeholder="Enter email ID" name="email">
                     </div>
-                    {if isset($error2)}
-                      <div class="alert alert-danger">
-                        Empty
-                      </div>
-                    {/if}
                   </div>
                   <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                       <label for="phone">Username</label>
                       <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
                     </div>
-                    {if isset($error3)}
-                      <div class="alert alert-danger">
-                        Empty
-                      </div>
-                    {/if}
                   </div>
                 </div>
                 <div class="row gutters">

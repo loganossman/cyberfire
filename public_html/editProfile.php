@@ -26,8 +26,9 @@ include PRIVATE_PATH . "db.inc.php";
         }else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
             echo '<script>alert("invalid email")</script>';
         }else{
-            $sql = "INSERT INTO employee (profile_img,email, password, username, first_name, last_name, pay_rate) 
-                VALUES('$profile','$email', '$userName', 'dsadadfa' , '$first', '$last', '9.75')";
+            $sql = "UPDATE employee SET profile_img = '$profile',email = '$email',
+                    username = '$userName', first_name = '$first', last_name = '$last'
+                    WHERE password = 'abcd' ";
             $stmt = $pdo->prepare($sql);
             $stmt->execute();
 //            header("Location: success.php");
