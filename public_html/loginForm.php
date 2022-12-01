@@ -5,8 +5,9 @@
  */
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
-// https://stackoverflow.com/questions/22045788/check-if-email-exists-in-mysql-database
-// https://phpdelusions.net/pdo_examples/check_email_exists
+
+session_start();
+
 // mr.ianpadilla@gmail.com
 // 1234
 // CyFiRemote
@@ -14,16 +15,7 @@ include PRIVATE_PATH . "db.inc.php";
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-
-    if(empty($email) && empty($password)) {
-        echo '<script>alert("Please fill out entire form")</script>';
-    }
-    else if (empty($email)) {
-        echo '<script>alert("Please insert email")</script>';
-    }
-    else if (empty($password)) {
-        echo '<script>alert("Please insert password")</script>';
-    }
+    $_SESSION["email"] = $email;
 
     // check if email matches an email in Employee table
     $sql = "SELECT * FROM employee WHERE email='" . $email . "'";
@@ -35,6 +27,7 @@ if (isset($_POST['submit'])) {
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->execute();
     $pass = $stmt2->fetch();
+    
     if ($pass and $user) {
         $smarty->display("EmployeeSchedule.tpl");
     } else {
