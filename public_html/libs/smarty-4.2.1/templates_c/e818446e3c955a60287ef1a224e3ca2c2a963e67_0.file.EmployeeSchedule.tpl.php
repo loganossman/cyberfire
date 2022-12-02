@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-17 17:25:58
+/* Smarty version 4.2.1, created on 2022-12-02 15:24:07
   from 'C:\Apache24\htdocs\cyberfire\public_html\templates\EmployeeSchedule.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6376b4f65d3046_04749993',
+  'unifunc' => 'content_638a5ee7231a99_42478470',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e818446e3c955a60287ef1a224e3ca2c2a963e67' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\cyberfire\\public_html\\templates\\EmployeeSchedule.tpl',
-      1 => 1668718995,
+      1 => 1670012617,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6376b4f65d3046_04749993 (Smarty_Internal_Template $_smarty_tpl) {
+function content_638a5ee7231a99_42478470 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,17 +59,17 @@ function content_6376b4f65d3046_04749993 (Smarty_Internal_Template $_smarty_tpl)
             </div>
     
             <aside class = "aside">
-                <div>Today:</div>
+                <div class="boldJohn">Today:</div>
                 <div>Westside: 10am-8pm</div>
-                <div>Tomorrow:</div>
+                <div class="boldJohn">Tomorrow:</div>
                 <div>Westside: 10am-8pm</div>
-                <div>May 8, 2022:</div>
+                <div class="boldJohn">May 8, 2022:</div>
                 <div>HRC: 10am-8pm</div>
-                <div>May 9, 2022:</div>
+                <div class="boldJohn">May 9, 2022:</div>
                 <div>HRC: 10am-8pm</div>
-                <div>May 10, 2022:</div>
+                <div class="boldJohn">May 10, 2022:</div>
                 <div>Westside: 10am-8pm</div>
-                <div>May 11, 2022:</div>
+                <div class="boldJohn">May 11, 2022:</div>
                 <div>Westside: 10am-8pm</div>
             </aside>
         </div>

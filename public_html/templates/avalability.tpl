@@ -25,7 +25,7 @@
     <div class ="contentContainer">
         <div class ="viewBLORP">
             <div class = "title">
-                <h1>Please enter your Avalability:</h1>
+                <h1>Please enter your Availability:</h1>
             </div>
             <div class = "avalabilityCalanderBody">
                 <h3></h3> 
@@ -53,7 +53,7 @@
                     <tag>Evening</tag>
                 </div>
                 <div class = "a">
-                    <h2>Set this day as a weekly Defualt: </h2>
+                    <h2>Set this day as a weekly default: </h2>
                     <input class="input" type="checkbox" id="active" name="Active" value="null">
                     <tag>Active</tag>
                     <input class="input" type="checkbox" id="nonactive" name="Not Active(Defualt)" value="null">

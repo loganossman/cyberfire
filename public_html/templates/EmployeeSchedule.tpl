@@ -36,17 +36,17 @@
             </div>
     
             <aside class = "aside">
-                <div>Today:</div>
+                <div class="boldJohn">Today:</div>
                 <div>Westside: 10am-8pm</div>
-                <div>Tomorrow:</div>
+                <div class="boldJohn">Tomorrow:</div>
                 <div>Westside: 10am-8pm</div>
-                <div>May 8, 2022:</div>
+                <div class="boldJohn">May 8, 2022:</div>
                 <div>HRC: 10am-8pm</div>
-                <div>May 9, 2022:</div>
+                <div class="boldJohn">May 9, 2022:</div>
                 <div>HRC: 10am-8pm</div>
-                <div>May 10, 2022:</div>
+                <div class="boldJohn">May 10, 2022:</div>
                 <div>Westside: 10am-8pm</div>
-                <div>May 11, 2022:</div>
+                <div class="boldJohn">May 11, 2022:</div>
                 <div>Westside: 10am-8pm</div>
             </aside>
         </div>

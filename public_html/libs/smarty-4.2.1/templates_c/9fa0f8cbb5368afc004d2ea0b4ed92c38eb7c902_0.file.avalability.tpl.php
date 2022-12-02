@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-19 14:05:15
+/* Smarty version 4.2.1, created on 2022-12-02 15:30:40
   from 'C:\Apache24\htdocs\cyberfire\public_html\templates\avalability.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_637928ebaf8739_75965267',
+  'unifunc' => 'content_638a6070bffad1_78921224',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fa0f8cbb5368afc004d2ea0b4ed92c38eb7c902' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\cyberfire\\public_html\\templates\\avalability.tpl',
-      1 => 1668720765,
+      1 => 1670013038,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_637928ebaf8739_75965267 (Smarty_Internal_Template $_smarty_tpl) {
+function content_638a6070bffad1_78921224 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +48,7 @@ function content_637928ebaf8739_75965267 (Smarty_Internal_Template $_smarty_tpl)
     <div class ="contentContainer">
         <div class ="viewBLORP">
             <div class = "title">
-                <h1>Please enter your Avalability:</h1>
+                <h1>Please enter your Availability:</h1>
             </div>
             <div class = "avalabilityCalanderBody">
                 <h3></h3> 
@@ -76,7 +76,7 @@ function content_637928ebaf8739_75965267 (Smarty_Internal_Template $_smarty_tpl)
                     <tag>Evening</tag>
                 </div>
                 <div class = "a">
-                    <h2>Set this day as a weekly Defualt: </h2>
+                    <h2>Set this day as a weekly default: </h2>
                     <input class="input" type="checkbox" id="active" name="Active" value="null">
                     <tag>Active</tag>
                     <input class="input" type="checkbox" id="nonactive" name="Not Active(Defualt)" value="null">
