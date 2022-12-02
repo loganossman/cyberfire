@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-12-01 13:02:48
+/* Smarty version 4.2.1, created on 2022-12-01 13:59:16
   from 'C:\Apache24\htdocs\cyberfire\public_html\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6388ec489b3d85_02622990',
+  'unifunc' => 'content_6388f98495c624_24208892',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dded8d9a296f1e1568f9ec333aaf6b5bb2effd9f' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\cyberfire\\public_html\\templates\\login.tpl',
-      1 => 1669917765,
+      1 => 1669921125,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6388ec489b3d85_02622990 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6388f98495c624_24208892 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,13 +56,10 @@ function content_6388ec489b3d85_02622990 (Smarty_Internal_Template $_smarty_tpl)
                     <a href="employeeVerification.php" style="text-decoration: none;">New Employee <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
             </div>
-            <div class = "footer">
-                <p>
-                    If you are have trouble logging in please try resetting password.
-                    If that doesnt work please email cisdummy2022@gmail.com or contact your Manager
-                </p>
-            </div>
         </div>
+    </div>
+    <div class="footer">
+        <p>If you are have trouble logging in please try resetting password. If that doesnt work please email cisdummy2022@gmail.com or contact your Manager</p>
     </div>
 </body>
 </html><?php }
