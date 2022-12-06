@@ -6,8 +6,6 @@
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
-session_start();
-
 // mr.ianpadilla@gmail.com
 // 1234
 // CyFiRemote
@@ -18,12 +16,12 @@ if (isset($_POST['submit'])) {
     $_SESSION["email"] = $email;
 
     // check if email matches an email in Employee table
-    $sql = "SELECT * FROM employee WHERE email='" . $email . "'";
+    $sql = "SELECT username FROM employee WHERE email='" . $email . "'";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $user = $stmt->fetch();
     // check if password matches a password in Employee table
-    $sql2 = "SELECT * FROM employee WHERE password = '" . $password . "'";
+    $sql2 = "SELECT password FROM employee WHERE password = '" . $password . "'";
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->execute();
     $pass = $stmt2->fetch();

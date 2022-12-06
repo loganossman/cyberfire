@@ -25,12 +25,12 @@
                 <h1>Profile</h1>
             </div>
             <!-- based on stuff from here: https://www.w3schools.com/howto/howto_css_profile_card.asp -->
-            <div class="profile">
-                <div style="float:left;">
+            <div class="profile" style="max-width: 400px;">
+                <div style="float:left; margin-right: 20px;">
                 <img src="img/pfp.png">
-                <h1>Hee Hoo</h1>
+                <h1>{$wholeName}</h1>
                 </div>
-                <div>
+                <div style="float:right;">
                 <p>DoB: 4/20/1969</p>
                 <p>123 Stinky Street</p>
                 <p>1-800-420-6969</p>
