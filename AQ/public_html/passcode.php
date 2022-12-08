@@ -8,8 +8,12 @@ include PRIVATE_PATH . "db.inc.php";
 
 if(!isset($_POST["passcodeEntry"])){
     $retval = mail("loganossman@gmail.com", "Egg", "Your passcode is 185769", "My Header");
-    echo($retval . "1");
+    echo($retval);
+    echo($retval);
     $smarty->display("passcode.tpl");
+    echo($retval);
+    echo($retval);
+    echo("pie");
 }
 elseif($_POST["passcodeEntry"] == "185769"){
     $smarty->display("passwordReEntry.tpl");
