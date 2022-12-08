@@ -33,9 +33,6 @@ if (isset($_POST['submit'])) {
     } else {
         //echo '<script>alert("Incorrect email or password")</script>';
         $smarty->assign("error", "<p style=" . "color:red;" . ">Incorrect email or password!</p>");
-        echo($passCheck);
-        echo($hash[0]);
-        echo($hashword);
         $smarty->display("login.tpl");
     }
 }
