@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
     $stmt->execute();
     $user = $stmt->fetch();
     // check if password matches a password in Employee table
-    $sql2 = "SELECT password FROM employee WHERE email = '" . $password . "'";
+    $sql2 = "SELECT password FROM employee WHERE email = '" . $email . "'";
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->execute();
     $pass = $stmt2->fetch();
