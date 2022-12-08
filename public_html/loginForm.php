@@ -22,18 +22,18 @@ if (isset($_POST['submit'])) {
     $stmt->execute();
     $user = $stmt->fetch();
     // check if password matches a password in Employee table
-    $sql2 = "SELECT password FROM employee WHERE email = '" . $email . "'";
+    $sql2 = "SELECT password FROM employee WHERE email = '" . $password . "'";
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->execute();
-    $hash = $stmt2->fetch();
-    $passCheck = password_verify($hashword, $hash[0]);
+    $pass = $stmt2->fetch();
+    $passCheck = password_verify($password, $pass[0]);
     
-    if ($passCheck and $user) {
+    if ($hashword == $pass[0] and $user) {
         $smarty->display("EmployeeSchedule.tpl");
     } else {
         //echo '<script>alert("Incorrect email or password")</script>';
         $smarty->assign("error", "<p style=" . "color:red;" . ">Incorrect email or password!</p>");
-        echo $passCheck;
+        echo($passCheck);
         echo($hash[0]);
         echo($hashword);
         $smarty->display("login.tpl");
