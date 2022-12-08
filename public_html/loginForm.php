@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->execute();
     $hash = $stmt2->fetch();
-    $passCheck = password_verify($password, $hash);
+    $passCheck = password_verify($password, $hash[0]);
     
     if ($passCheck and $user) {
         $smarty->display("EmployeeSchedule.tpl");
