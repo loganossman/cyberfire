@@ -12,7 +12,7 @@ include PRIVATE_PATH . "db.inc.php";
 
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
-    $password = hash("md5", $_POST['password'], false);
+    $password = $_POST['password'];
     $_SESSION["email"] = $email;
 
     // check if email matches an email in Employee table
@@ -21,12 +21,13 @@ if (isset($_POST['submit'])) {
     $stmt->execute();
     $user = $stmt->fetch();
     // check if password matches a password in Employee table
-    $sql2 = "SELECT password FROM employee WHERE password = '" . $password . "'";
+    $sql2 = "SELECT password FROM employee WHERE email = '" . $email . "'";
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->execute();
-    $pass = $stmt2->fetch();
+    $hash = $stmt2->fetch();
+    $passCheck = password_verify($password, $hash);
     
-    if ($pass and $user) {
+    if ($passCheck and $user) {
         $smarty->display("EmployeeSchedule.tpl");
     } else {
         //echo '<script>alert("Incorrect email or password")</script>';
