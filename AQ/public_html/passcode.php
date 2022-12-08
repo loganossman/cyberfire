@@ -7,13 +7,12 @@ include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
 if(!isset($_POST["passcodeEntry"])){
-    $retval = mail("loganossman@gmail.com", "Egg", "Your passcode is 185769", "My Header");
-    echo($retval);
-    echo($retval);
+    mail("loganossman@gmail.com", "Your Reset Passcode", "Your passcode is 185769");
+    mail("lo2196@messiah.edu", "Your Reset Passcode", "Your passcode is 185769");
     $smarty->display("passcode.tpl");
-    echo($retval);
-    echo($retval);
-    echo("pie");
+    mail("loganossman@gmail.com", "Your Reset Passcode", "Your passcode is 185769");
+    mail("lo2196@messiah.edu", "Your Reset Passcode", "Your passcode is 185769");
+    
 }
 elseif($_POST["passcodeEntry"] == "185769"){
     $smarty->display("passwordReEntry.tpl");
