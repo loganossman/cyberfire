@@ -12,7 +12,7 @@
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
             <div class = "containerGORGON">
-                <form method="post">
+                <form action="loginForm.php" method="post">
                     <div class =" txt_feild">
                         <label>Email*</label>
                         <input type="email" id="email" name="email" class="form-control" required>
@@ -27,10 +27,12 @@
                     <div class="forgot">Admin static login <a href="houston.php" style="color: rgba(224,62,76,.69)">Click here!</a></div>
                     
                     <input class="button" type="submit" id="submit" name="submit" value="Login" onclick="loginForm.php">
-                    <input class="button" type="submit" id="submit" name="submit" value="New Password" onclick="loginToPasscode.php">
                 </form>
                 <div class="New">
                     <a href="employeeVerification.php" style="text-decoration: none;">New Employee <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
+                </div>
+                <div class="New">
+                    <a href="passcode.php" style="text-decoration: none;">Forgot Password <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
             </div>
         </div>
