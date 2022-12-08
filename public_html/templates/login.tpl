@@ -12,7 +12,7 @@
                 <img class="logo" src="img/logolog.png" alt="blank" width="100%" >
             </div>
             <div class = "containerGORGON">
-                <form action="loginForm.php" method="post">
+                <form method="post">
                     <div class =" txt_feild">
                         <label>Email*</label>
                         <input type="email" id="email" name="email" class="form-control" required>
