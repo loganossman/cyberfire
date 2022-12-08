@@ -13,6 +13,7 @@ include PRIVATE_PATH . "db.inc.php";
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $hashword = hash("md5", $password, false);
     $_SESSION["email"] = $email;
 
     // check if email matches an email in Employee table
@@ -25,7 +26,7 @@ if (isset($_POST['submit'])) {
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->execute();
     $hash = $stmt2->fetch();
-    $passCheck = password_verify($password, $hash[0]);
+    $passCheck = password_verify($hashword, $hash[0]);
     
     if ($passCheck and $user) {
         $smarty->display("EmployeeSchedule.tpl");
