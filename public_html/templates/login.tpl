@@ -26,7 +26,7 @@
                     </div>
                     <div class="forgot">Admin static login <a href="houston.php" style="color: rgba(224,62,76,.69)">Click here!</a></div>
                     
-                    <input class="button" type="submit" id="submit" name="submit" value="Login" onclick="loginForm.php">
+                    <input class="button" type="submit" id="submit" name="submit" value="Login">
                 </form>
                 <div class="New">
                     <a href="employeeVerification.php" style="text-decoration: none;">New Employee <span style="color: rgba(224,62,76,.69)">Click here!</span></a>

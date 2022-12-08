@@ -12,7 +12,7 @@ include PRIVATE_PATH . "db.inc.php";
 
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = hash("md5", $_POST['password'], false);
     $_SESSION["email"] = $email;
 
     // check if email matches an email in Employee table
