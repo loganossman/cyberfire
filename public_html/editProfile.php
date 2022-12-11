@@ -6,6 +6,11 @@
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
+    $sql = "SELECT * FROM employee WHERE email='"  . "'";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $user = $stmt->fetch();
+
     if (isset($_POST['cancel'])) {
         header("Location: profile.php");
         exit();
@@ -18,11 +23,11 @@ include PRIVATE_PATH . "db.inc.php";
 //            "<img src='C:\Users\mcgil\Pictures\profile.jpg' alt='img' />";
 
         if(empty($email) && empty($first) && empty($last) && empty($userName)){
-            echo '<script>alert("Please fill out entire form")</script>';
+            $smarty -> assign("error","empty");
         }else if (!preg_match('/^[a-zA-Z]*$/', $first) || !preg_match('/^[a-zA-Z]*$/', $last)){
-            echo '<script>alert("Invalid name")</script>';
+            $smarty -> assign("error1","spelled incorrect");
         }else if(preg_match('/^[0-9]{10}[a-zA-Z]+$/', $userName)) {
-            echo '<script>alert("Invalid username")</script>';
+            $smarty -> assign("error2","Invalid Username");
         }else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
             echo '<script>alert("invalid email")</script>';
         }else{
