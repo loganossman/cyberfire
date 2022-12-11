@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-11-17 17:23:04
+/* Smarty version 4.2.1, created on 2022-12-06 11:05:07
   from 'C:\Apache24\htdocs\cyberfire\public_html\templates\profile.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6376b44841cd46_34673776',
+  'unifunc' => 'content_638f6833d83200_73335665',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a9df3e7d4e5e1e154f356cd8f74c228362aa4fb6' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\cyberfire\\public_html\\templates\\profile.tpl',
-      1 => 1668720765,
+      1 => 1670342705,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6376b44841cd46_34673776 (Smarty_Internal_Template $_smarty_tpl) {
+function content_638f6833d83200_73335665 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,12 +48,13 @@ function content_6376b44841cd46_34673776 (Smarty_Internal_Template $_smarty_tpl)
                 <h1>Profile</h1>
             </div>
             <!-- based on stuff from here: https://www.w3schools.com/howto/howto_css_profile_card.asp -->
-            <div class="profile">
-                <div style="float:left;">
+            <div class="profile" style="max-width: 400px;">
+                <div style="float:left; margin-right: 20px;">
                 <img src="img/pfp.png">
-                <h1>Hee Hoo</h1>
+                <h1><?php echo $_smarty_tpl->tpl_vars['wholeName']->value;?>
+</h1>
                 </div>
-                <div>
+                <div style="float:right;">
                 <p>DoB: 4/20/1969</p>
                 <p>123 Stinky Street</p>
                 <p>1-800-420-6969</p>
