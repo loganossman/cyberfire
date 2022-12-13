@@ -3,6 +3,8 @@
  * @var $smarty Smarty defined in private_html/config.inc.php
  * @var $pdo PDO defined in db.inc.php
  */
+session_start();
+
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
@@ -29,6 +31,7 @@ if (isset($_POST['submit'])) {
     $passCheck = password_verify($password, $pass[0]);
     
     if ($hashword == $pass[0] and $user) {
+        $_SESSION["myID"] = $user["user_id"];
         $smarty->display("EmployeeSchedule.tpl");
     } else {
         //echo '<script>alert("Incorrect email or password")</script>';

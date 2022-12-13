@@ -13,11 +13,13 @@ $messageTable = $stmt->fetch();
 
 $blackList = [];
 
-foreach $messageTable in $messages{
+foreach ($messageTable as $messages){
     if(!((in_array($messages["sender_id"], $blackList)) or (in_array($messages["receiver_id"], $blackList)))){
         $conversation = [];
-        foreach $messageTable in $singleConvo{
-            if()
+        foreach ($messageTable as $singleConvo){
+            if(1){
+
+            }
         }
         if($messages["sender_id"] == $_SESSION["myID"]){
             $blackList[] = $messages["sender_id"];

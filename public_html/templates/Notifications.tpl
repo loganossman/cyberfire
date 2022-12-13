@@ -32,22 +32,6 @@
                         <div class="col-2"><p style="float:left; padding-left: 15px">Today</p></div>
                     </button>
                 </div>
-                <div class="paddingMeBoyMeBob middleMessage">
-                    <button class="messageCont row d-flex align-items-center" style="--bs-gutter-x: 0" onclick="open2()">
-                        <div class="col-2 d-flex align-items-center"><img src="img/circle-32.png" alt="gray circle" class="profileImg"></img>Sarrah(Employee)</div>
-                        <div class="col-6"><p class="message"><img src="img/circle-16.png" alt="gray circle" class="profileImg">(Sarrah):When are we getting paychecks. I really need .....</p></div>
-                        <div class="col-2"><p style="float:right">6:32 pm</p></div>
-                        <div class="col-2"><p style="float:left; padding-left: 15px">Yesterday</p></div>
-                    </button>
-                </div>
-                <div class="paddingMeBoyMeBob">
-                    <button class="messageCont row d-flex align-items-center" style="--bs-gutter-x: 0" onclick="open3()">
-                        <div class="col-2 d-flex align-items-center"><img src="img/circle-32.png" alt="gray circle" class="profileImg"></img>John(Employee)</div>
-                        <div class="col-6"><p class="message"><img src="img/circle-16.png" alt="gray circle" class="profileImg">(John):Can you give me a diffrent location other than Pine forest...</p></div>
-                        <div class="col-2"><p style="float:right">9:50 am</p></div>
-                        <div class="col-2"><p style="float:left; padding-left: 15px">May 2, 2022</p></div>
-                    </button>
-                </div>
             </div>
 
         </div>
@@ -83,68 +67,6 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="exampleModalTwo" tabindex="-1" aria-labelledby="exampleModalLabelTwo" aria-hidden="true">
-            <div class="modal-dialog" style="max-width: 300%; width: 60%; margin-top: 5%;">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabelTwo"><img src="img/circle-32.png" alt="gray circle" class="profileImg"> Sarrah</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div>
-                            <div class="row d-flex align-items-center" style="flex-direction: row">
-                                <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
-                                <p class="col-6 messageOther">When are we getting paychecks. I really need to know.</p>
-                            </div>
-                            <div class="row d-flex align-items-center" style="flex-direction: row-reverse; margin-top: 3%; margin-bottom: 3%; ">
-                                <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
-                                <p class="col-6 messageMine">You will be getting your check tomorrow. Sorry it took so long.</p>
-                            </div>
-                            <div class="row d-flex align-items-center">
-                                <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
-                                <p class="col-6 messageOther">Ok. I really want to buy the Xbox Series X for my son. He ate our cat. Please help.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer" style="align-items: center; border-top:none;">
-                        <div style="height: 100%; width: 100%; border-style: solid; border-width: 1px;">
-                            <p style="padding-left: 1%">text...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="exampleModalThree" tabindex="-1" aria-labelledby="exampleModalLabelThree" aria-hidden="true">
-            <div class="modal-dialog" style="max-width: 300%; width: 60%; margin-top: 5%;">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabelThree"><img src="img/circle-32.png" alt="gray circle" class="profileImg"> Sarrah</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div>
-                            <div class="row d-flex align-items-center" style="flex-direction: row">
-                                <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
-                                <p class="col-6 messageOther">Can you give me a location other than pine forest? There is no forest. Only koalas.</p>
-                            </div>
-                            <div class="row d-flex align-items-center" style="flex-direction: row-reverse; margin-top: 3%; margin-bottom: 3%; ">
-                                <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
-                                <p class="col-6 messageMine">Must have changed since I was last there. How does the underworld sound instead of there?</p>
-                            </div>
-                            <div class="row d-flex align-items-center">
-                                <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
-                                <p class="col-6 messageOther">As long as I cannot hear their mating call anymore. It is the most terrifying sound.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer" style="align-items: center; border-top:none;">
-                        <div style="height: 100%; width: 100%; border-style: solid; border-width: 1px;">
-                            <p style="padding-left: 1%">text...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -153,14 +75,6 @@
     <script>
         function open1(){
             $('#exampleModal').modal('show');
-            console.log("Running");
-        }
-        function open2(){
-            $('#exampleModalTwo').modal('show');
-            console.log("Running");
-        }
-        function open3(){
-            $('#exampleModalThree').modal('show');
             console.log("Running");
         }
     </script>
