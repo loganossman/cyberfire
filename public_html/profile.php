@@ -1,6 +1,7 @@
 <?php
 /**
  * @var $smarty
+ * @var $pdo PDO defined in db.inc.php
  */
 
 include "../private_html/config.php";
