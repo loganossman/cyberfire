@@ -5,5 +5,5 @@
 
 include "../private_html/config.php";
 
-$smarty->display("ContactManager.tpl");
+$smarty->display("Notifications.tpl");
 

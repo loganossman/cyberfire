@@ -51,9 +51,7 @@
             </div>
 
         </div>
-        <button type="button" class="button"  onclick="open1()">
 
-        </button>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" style="max-width: 300%; width: 60%; margin-top: 5%;">
                 <div class="modal-content">
