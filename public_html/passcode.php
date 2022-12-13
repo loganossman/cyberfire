@@ -2,19 +2,19 @@
 /**
  * @var $smarty
  */
+session_start();
 
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
 if(!isset($_POST["passcodeEntry"])){
-    mail("loganossman@gmail.com", "Your Reset Passcode", "Your passcode is 185769");
-    mail("lo2196@messiah.edu", "Your Reset Passcode", "Your passcode is 185769");
+    mail($_SESSION["username"], "Your Reset Passcode", "Your passcode is 185769");
+    $_SESSION["passcode"] = rand(100000, 999999);
+    echo($_SESSION["passcode"]);
     $smarty->display("passcode.tpl");
-    mail("loganossman@gmail.com", "Your Reset Passcode", "Your passcode is 185769");
-    mail("lo2196@messiah.edu", "Your Reset Passcode", "Your passcode is 185769");
-    
+
 }
-elseif($_POST["passcodeEntry"] == "185769"){
+elseif($_POST["passcodeEntry"] == strval($SESSION["passcode"])){
     $smarty->display("passwordReEntry.tpl");
 }
 else{
