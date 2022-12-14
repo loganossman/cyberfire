@@ -3,6 +3,8 @@
  * @var $smarty Smarty defined in private_html/config.inc.php
  * @var $pdo PDO defined in db.inc.php
  */
+session_start();
+
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
@@ -13,12 +15,7 @@ include PRIVATE_PATH . "db.inc.php";
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-
-    $sql3 = "SELECT user_id FROM employee WHERE email='" . $email . "'";
-    $stmt3 = $pdo->prepare($sql3);
-    $stmt3->execute();
-    $user3 = $stmt3->fetch();
-    $_SESSION["id"] = $user3;
+    $hashword = hash("md5", $password, false);
 
     $_SESSION["email"] = $email;
 
@@ -29,13 +26,20 @@ if (isset($_POST['submit'])) {
     $stmt->execute();
     $user = $stmt->fetch();
     // check if password matches a password in Employee table
-    $sql2 = "SELECT password FROM employee WHERE password = '" . $password . "'";
+    $sql2 = "SELECT password FROM employee WHERE email = '" . $email . "'";
     $stmt2 = $pdo->prepare($sql2);
     $stmt2->execute();
     $pass = $stmt2->fetch();
-    
-    if ($pass and $user) {
-        header("Location: ../public_html/EmployeeSchedule.php");
+    $passCheck = password_verify($password, $pass[0]);
+
+    if ($hashword == $pass[0] and $user) {
+        $sql3 = "SELECT user_id FROM employee WHERE email = '" . $email . "'";
+        $stmt3 = $pdo->prepare($sql3);
+        $stmt3->execute();
+        $userID = $stmt3->fetch();
+        $_SESSION["myID"] = $userID["user_id"];
+        $smarty->display("EmployeeSchedule.tpl");
+
     } else {
         //echo '<script>alert("Incorrect email or password")</script>';
         $smarty->assign("error", "<p style=" . "color:red;" . ">Incorrect email or password!</p>");
