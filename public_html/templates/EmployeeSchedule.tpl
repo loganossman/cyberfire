@@ -15,7 +15,7 @@
         <ul class="nav__links">
             <li><a href="EmployeeSchedule.php">Schedule</a></li>
                 <li><a href="avalability.php">Availability</a></li>
-                <li><a href="ContactManager.php">Contact Manager</a></li>
+                <li><a href="Notifications.php">Contact Manager</a></li>
                 <li><a href="profile.php">Profile</a></li>                
 
                 
