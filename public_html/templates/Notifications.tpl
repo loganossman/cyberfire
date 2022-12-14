@@ -56,7 +56,7 @@
                                 {else}
                                     <div class="row d-flex align-items-center" style="flex-direction: row-reverse; margin-top: 3%; margin-bottom: 3%; ">
                                         <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
-                                        <p class="col-4 messageMine">{$messages["message"]}</p>
+                                        <p class="col-2 messageMine">{$messages["message"]}</p>
                                     </div>
                                 {/if}
                             {/foreach}
