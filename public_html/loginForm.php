@@ -34,7 +34,8 @@ if (isset($_POST['submit'])) {
         $sql3 = "SELECT * FROM employee WHERE username = '" . $user . "'";
         $stmt3 = $pdo->prepare($sql3);
         $stmt3->execute();
-        $_SESSION["myID"] = $stmt3["user_id"];
+        $userID = $stmt3->fetch();
+        $_SESSION["myID"] = $userID["user_id"];
         $smarty->display("EmployeeSchedule.tpl");
     } else {
         //echo '<script>alert("Incorrect email or password")</script>';
