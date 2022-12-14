@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
         $stmt3 = $pdo->prepare($sql3);
         $stmt3->execute();
         $userID = $stmt3->fetch();
-        $_SESSION["myID"] = $userID;
+        $_SESSION["myID"] = $userID["user_id"];
         $smarty->display("EmployeeSchedule.tpl");
     } else {
         //echo '<script>alert("Incorrect email or password")</script>';
