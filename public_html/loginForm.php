@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
     $passCheck = password_verify($password, $pass[0]);
     
     if ($hashword == $pass[0] and $user) {
-        $_SESSION["myID"] = $user["user_id"];
+        $_SESSION["myID"] = $stmt["user_id"];
         $smarty->display("EmployeeSchedule.tpl");
     } else {
         //echo '<script>alert("Incorrect email or password")</script>';

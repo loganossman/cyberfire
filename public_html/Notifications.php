@@ -2,6 +2,7 @@
 /**
  * @var $smarty
  */
+session_start();
 
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
@@ -14,6 +15,7 @@ $messageTable = $stmt->fetch();
 $blackList = [];
 $conversationContainer = [];
 echo("boom baby <br>" . $_SESSION["myID"]);
+echo($_SESSION["myID"]);
 foreach ($messageTable as $stmt){
     echo("boom baby <br>");
     if(!((in_array($messages["sender_id"], $blackList)) or (in_array($messages["receiver_id"], $blackList)))){
