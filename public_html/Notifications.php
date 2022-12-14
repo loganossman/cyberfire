@@ -18,6 +18,7 @@ $conversationContainer = [];
 foreach ($messageTable as $messages){
     if(!((in_array($messages["sender_id"], $blackList)) or (in_array($messages["receiver_id"], $blackList)))){
         $conversation = [];
+        $their_is = "";
         if($messages["sender_id"] ==  $_SESSION["myID"]){
             $their_id = $messages["receiver_id"];
         }
