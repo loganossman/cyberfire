@@ -18,7 +18,11 @@ include PRIVATE_PATH . "db.inc.php";
 
     $wholeName = $firstName[0] . " " . $lastName[0];
 
-    $email1 = $_SESSION["email"];
+    $sql3 = "SELECT email FROM employee WHERE email='" . $_SESSION["email"] . "'";
+    $stmt3 = $pdo->prepare($sql3);
+    $stmt3->execute();
+    $email = $stmt3->fetch();
+    $email1 = $email[0];
 
 
 //    $workEmail = $emails[0];
