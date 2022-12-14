@@ -22,8 +22,12 @@
                         <input type="lastName" id="lastName" name="lastName" class="form-control" required>
                     </div>
                     <div class =" txt_feild">
-                        <label>Date of Birth</label>
-                        <input type="date" id="DOB" name="DOB" class="form-control" required>
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class =" txt_feild">
+                        <label>Username</label>
+                        <input type="username" id="username" name="username" class="form-control" required>
                     </div>
                     <div class =" txt_feild">
                         <label>Enter Verification Password</label>
