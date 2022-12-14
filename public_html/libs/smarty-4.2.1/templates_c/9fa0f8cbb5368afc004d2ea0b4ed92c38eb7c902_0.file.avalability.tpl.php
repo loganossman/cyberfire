@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-12-02 15:30:40
+/* Smarty version 4.2.1, created on 2022-12-14 12:41:45
   from 'C:\Apache24\htdocs\cyberfire\public_html\templates\avalability.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_638a6070bffad1_78921224',
+  'unifunc' => 'content_639a0ad94e1050_93723413',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9fa0f8cbb5368afc004d2ea0b4ed92c38eb7c902' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\cyberfire\\public_html\\templates\\avalability.tpl',
-      1 => 1670013038,
+      1 => 1671039702,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_638a6070bffad1_78921224 (Smarty_Internal_Template $_smarty_tpl) {
+function content_639a0ad94e1050_93723413 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,6 +59,10 @@ function content_638a6070bffad1_78921224 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div>
             <div class="avalability">
+            
+            <form action="/action_page.php" method="post">
+
+            
                 <div class = "a">
                     <h2>Location: </h2>
                     <input  class="input" type="checkbox" id="location 1" name="HRC" value="null">
@@ -82,6 +86,8 @@ function content_638a6070bffad1_78921224 (Smarty_Internal_Template $_smarty_tpl)
                     <input class="input" type="checkbox" id="nonactive" name="Not Active(Defualt)" value="null">
                     <tag>Not Active (Defualt)</tag>
                 </div>
+                <button type="submit" value="submit">Submit</button>
+            </form>
             </div>
         </div>
     </div>
