@@ -10,13 +10,14 @@ include PRIVATE_PATH . "db.inc.php";
 $sql = "SELECT * FROM message WHERE sender_id = " . $_SESSION["myID"] . " OR receiver_id = " . $_SESSION["myID"];
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
+$stmtCopy = $stmt;
 $messageTable = $stmt->fetch();
 
 $blackList = [];
 $conversationContainer = [];
 echo("boom baby <br>");
 echo($sql);
-foreach ($messageTable as $messages){
+foreach ($stmtCopy as $messages){
     if(!((in_array($messages["sender_id"], $blackList)) or (in_array($messages["receiver_id"], $blackList)))){
         $conversation = [];
         $their_id = "";
@@ -26,7 +27,7 @@ foreach ($messageTable as $messages){
         else{
             $their_id = $messages["sender_id"];
         }
-        foreach ($messageTable as $singleConvo){
+        foreach ($stmtCopy as $singleConvo){
             if(($singleConvo["sender_id"] ==  $_SESSION["myID"] and $singleConvo["receiver_id"] == $their_id) or ($singleConvo["receiver_id"] ==  $_SESSION["myID"] and $singleConvo["sender_id"] == $their_id)){
                 $conversation[] = $singleConvo["message"];
                 echo($their_id);
