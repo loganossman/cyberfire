@@ -31,7 +31,10 @@ if (isset($_POST['submit'])) {
     $passCheck = password_verify($password, $pass[0]);
     
     if ($hashword == $pass[0] and $user) {
-        $_SESSION["myID"] = $stmt["user_id"];
+        $sql3 = "SELECT * FROM employee WHERE username = '" . $user . "'";
+        $stmt3 = $pdo->prepare($sql3);
+        $stmt3->execute();
+        $_SESSION["myID"] = $stmt3["user_id"];
         $smarty->display("EmployeeSchedule.tpl");
     } else {
         //echo '<script>alert("Incorrect email or password")</script>';
