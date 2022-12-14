@@ -91,7 +91,7 @@ button:hover{
 .footer{
     margin: auto;
     width: 30vh;
-    text-align: center
+    text-align: center;
 }
 .containerGORGON{
     display: flex;
@@ -295,7 +295,7 @@ ul {list-style-type: none;}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap');
 
 .title{
-    height: 19vh;
+    height: 12vh;
 }
 .title h1{
     font-weight: 100;
@@ -530,10 +530,16 @@ aside{
     height: 90%;
    /* float: right;*/
     margin-right: 1vh;
+    border-radius: 5px;
 }
 aside div{
     /*text-align: left;*/
-    padding: 10px;
+    padding: 8px;
+    color: white;
+}
+.boldJohn {
+    font-weight: bold;
+    text-decoration: underline;
 }
 .values{
     float: left;
@@ -581,7 +587,6 @@ hr.solid {
     margin: auto;
     text-align: center;
   }
-
 
 .body1 {
     padding-top: 3rem;

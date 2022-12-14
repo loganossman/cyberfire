@@ -115,9 +115,6 @@ background-color: rgba(224, 62, 76, 0.666);    font-weight: 1000;
     display:flex;
     flex-direction:row;
 }
-.employee_view{
-    
-}
 .red{
     background-color: #ae4545;
 }
