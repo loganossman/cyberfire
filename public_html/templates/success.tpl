@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Aura Aquatics Scheduling</title>
     <link rel="stylesheet" href="css/bigChungus.css"/>
-    <meta http-equiv="refresh" content="4;url=profile.php" />
+    <meta http-equiv="refresh" content="4;url=login.php" />
 </head>
 <body>     
     <div class ="contentContainerGORGON">
@@ -17,7 +17,7 @@
                         <br>loggin screen in 4 seconds. 
                     </p>
                 </div> 
-                <a href="profile.php">Click Here to go to profile page now</a>
+                <a href="login.php">Click Here to go to re-sign in </a>
             </div>
         </div>
     </div>
