@@ -114,6 +114,7 @@ function fullDaysLayout(){
     var element = document.createElement("div");
     element.className = "full_calander__date",element.id ="date";
     document.getElementById("calander").appendChild(element);
+    console.log("the month is "+ month)
     for(var a=0; a<monthLocationAtEnd(); a++){
         // console.log("a = "+a+ "  days = "+daysInWeek)
          var element = document.createElement("div");
@@ -125,6 +126,7 @@ function fullDaysLayout(){
     }else{
         NumOfGrey = (new Date(year + "-" + (monthNum+1) + "-01").getDay())-1;
     } 
+    console.log("this is num of grey "+ NumOfGrey);
     var daysInWeek = 7;
     x=0;
     start = 1;
@@ -147,6 +149,7 @@ function fullDaysLayout(){
     
 }
 function fullGreyedGen(NumOfGrey){
+    console.log(NumOfGrey)
     for(var b=0; b<NumOfGrey;b++){  
         //console.log("b is "+b+" / grey is "+NumOfGrey);
         var element = document.createElement("div");
@@ -165,7 +168,7 @@ function fullDaysGen(daysInWeek){
             if(color == "red"){
                 var element = document.createElement("div");
                 obj.dt === start && monthArr[d.getMonth()] === month
-                ? (element.className="full_calander__number current_calander__number red",element.id =month+" "+start+", "+year,element.onclick = function(){ show("employeeEdit",this.id,adminView,globalid);})
+                ? (element.className="full_calander__number current_calander__number red",element.id =month+start+year,element.onclick = function(){ show("employeeEdit",this.id,adminView,globalid);})
                 : (element.className="full_calander__number red",element.id =month+" "+start+", "+year,element.onclick = function(){ show("employeeEdit",this.id,adminView,globalid);});
                 element.appendChild(document.createTextNode(start));
                 document.getElementById(("div"+x)).appendChild(element);

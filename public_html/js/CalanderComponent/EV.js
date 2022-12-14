@@ -171,7 +171,7 @@ function fullDaysGen(daysInWeek){
              if(color == "red"){
                  var element = document.createElement("div");
                  obj.dt === start && monthArr[d.getMonth()] === month
-                 ? (element.className="full_calander__number current_calander__number red",element.id =month+" "+start+", "+year,element.onclick = function(){ show("employeeEdit",this.id,employeeView,null);})
+                 ? (element.className="full_calander__number current_calander__number red",element.id =month+start+year,element.onclick = function(){ show("employeeEdit",this.id,employeeView,null);})
                  : (element.className="full_calander__number red",element.id =month+" "+start+", "+year,element.onclick = function(){ show("employeeEdit",this.id,employeeView,null);});
                  element.appendChild(document.createTextNode(start));
                  document.getElementById(("div"+x)).appendChild(element);

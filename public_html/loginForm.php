@@ -19,7 +19,6 @@ if (isset($_POST['submit'])) {
 
     $_SESSION["email"] = $email;
 
-
     // check if email matches an email in Employee table
     $sql = "SELECT username FROM employee WHERE email='" . $email . "'";
     $stmt = $pdo->prepare($sql);
