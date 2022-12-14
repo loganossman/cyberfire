@@ -35,10 +35,10 @@ foreach ($stmtCopy as $messages){
         }
         echo("Finished One Iteration");
         if($messages["sender_id"] == $_SESSION["myID"]){
-            $blackList[] = $messages["sender_id"];
+            $blackList[] = $messages["receiver_id"];
         }
         else{
-            $blackList[] = $messages["receiver_id"];
+            $blackList[] = $messages["sender_id"];
         }
         $conversationContainer[] = $conversation;
     }
