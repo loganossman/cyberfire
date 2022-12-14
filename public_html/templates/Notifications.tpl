@@ -72,7 +72,7 @@
             console.log("Running");
         }
     </script>
-{$accumulator += 1}
+{$accumulator = $accumulator + 1}
 {/foreach}
 
 </body>
