@@ -12,6 +12,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $stmtCopy = $stmt;
 $secondStmtCopy = $stmt;
+$thirdStmtCopy = $secondStmtCopy;
 
 $blackList = [];
 $conversationContainer = [];
@@ -29,7 +30,7 @@ foreach ($stmtCopy as $messages){
             $their_id = $messages["sender_id"];
         }
         echo($their_id);
-        foreach ($secondStmtCopy as $singleConvo){
+        foreach ($thirdStmtCopy as $singleConvo){
             if(($singleConvo["sender_id"] ==  $_SESSION["myID"] and $singleConvo["receiver_id"] == $their_id) or ($singleConvo["receiver_id"] ==  $_SESSION["myID"] and $singleConvo["sender_id"] == $their_id)){
                 $conversation[] = $singleConvo["message"];
             }
