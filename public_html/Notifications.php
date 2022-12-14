@@ -18,6 +18,7 @@ $conversationContainer = [];
 echo("boom baby <br>");
 echo($sql);
 foreach ($stmtCopy as $messages){
+    echo("egg <br>");
     if(!((in_array($messages["sender_id"], $blackList)) or (in_array($messages["receiver_id"], $blackList)))){
         $conversation = [];
         $their_id = "";
