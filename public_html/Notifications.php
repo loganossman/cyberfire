@@ -2,7 +2,6 @@
 /**
  * @var $smarty
  */
-session_start();
 
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";

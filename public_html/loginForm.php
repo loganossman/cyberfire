@@ -3,7 +3,7 @@
  * @var $smarty Smarty defined in private_html/config.inc.php
  * @var $pdo PDO defined in db.inc.php
  */
-session_start();
+
 
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";

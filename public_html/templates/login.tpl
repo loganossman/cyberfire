@@ -34,11 +34,11 @@
                 <div class="New">
                     <a href="emailReEntry.php" style="text-decoration: none;">Forgot Password <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
                 </div>
+                <div class="footer">
+                    <p>If you are have trouble logging in please try resetting password. If that doesnt work please email cisdummy2022@gmail.com or contact your Manager</p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <p>If you are have trouble logging in please try resetting password. If that doesnt work please email cisdummy2022@gmail.com or contact your Manager</p>
     </div>
 </body>
 </html>
