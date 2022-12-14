@@ -79,51 +79,120 @@
 
         </div>
     </div>
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div id="contain"class="modal-body">
-              
-            </div>
-            <div class="modal-footer">
-              <button onclick="closer()" type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+    <form action="calanderdata.php" method="post">
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div id="contain"class="modal-body">
+                
+              </div>
+              <div class="modal-footer">
+                <button  onclick="closer()" type="submit" id="submit" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+     </form>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script language="javascript">
+        function getData() {
+            // function below will run clear.php?h=michael
+            $.ajax({
+                type: "GET",
+                url: "calanderdata.php" ,
+                data: { h: "michael" },
+                success : function() { 
+
+                    // here is the code that will run on client side after running clear.php on server
+
+                    // function below reloads current page
+                    location.reload();
+
+                }
+            });
+        }
+    </script>
     <script src="js/moment.js"></script>
     <script src="js/CalanderComponent/AV.js" type="module"></script> 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
+
+
     <script> 
     var globalid;
+    let first = 0;
         function stateLocation(id){
           console.log("function inside .js stateLocation is runnning")
           globalid = id;
         }
         function show(type,id,data){
+        var array = {$array|@json_encode};
+        function convert(date){
+            var date = date.replace(',' , '');
+            var date = date.split(" ");
+            var Months = {
+                    January: "1",
+                    February: "2",
+                    March: "3",
+                    April: "4",
+                    May: "5",
+                    June: "6",
+                    July: "7",
+                    August: "8",
+                    September: "9",
+                    October: "10",
+                    November: "11",
+                    December: "12"
+             };
+             month = Months[date[0]];
+             day = date[1];
+             year = date[2];
+             date = year+"-"+month+"-"+day
+              return date;
+        };
         $('#myModal').modal('show')
         var h5 = document.querySelector(".modal-header h5");
-        h5.innerHTML = id;
+        val = id;
+        const date = new Date();
+        h5.innerHTML = id; 
+        let view = [];
+        for (var i = 0, len = Object.keys(array).length; i < len; i++) {
+            console.log(convert(id)+" == " + array[i+1]['date']);
+
+            if (convert(id) == array[i+1]['date'] & globalid == array[i+1]['location']){
+                
+                view.push(array[i+1]);
+                console.log("pushing");
+                console.log(array[i+1]);
+            };
+
+        };
+        console.log(view);
+        if(first == 1){
+            document.getElementById("v").remove();
+        };
         var element = document.createElement("div");
         element.className = "viewOfContain", element.id= "v";
-        element.appendChild(document.createTextNode(data));
+        for (var i = 0, len = Object.keys(view).length; i < len; i++) {
+            element.appendChild(document.createTextNode(((view[i]['name']) +" "+ (view[i]['shift']))));
+            element.appendChild(document.createElement("br"));
+        }
+        
         element.appendChild(document.createElement("br"));
         element.appendChild(document.createTextNode(" Location is: "+ globalid));
 
         document.getElementById("contain").appendChild(element);
+        first = 1;
         }
         function closer(){
           console.log("clear is running");
-          document.getElementById("v").remove();
         }
     </script> 
 </body>
