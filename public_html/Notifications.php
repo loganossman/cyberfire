@@ -7,7 +7,7 @@ session_start();
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
-$sql = "SELECT * FROM message WHERE sender_id = " . $_SESSION["myID"] . " OR receiver_id = " . $_SESSION["myID"] . ";";
+$sql = "SELECT * FROM message WHERE sender_id = " . $_SESSION["myID"] . " OR receiver_id = " . $_SESSION["myID"];
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $messageTable = $stmt->fetch();
