@@ -16,6 +16,7 @@ $blackList = [];
 $conversationContainer = [];
 
 foreach ($messageTable as $messages){
+    echo("boom baby <br>");
     if(!((in_array($messages["sender_id"], $blackList)) or (in_array($messages["receiver_id"], $blackList)))){
         echo("boom baby <br>");
         $conversation = [];
