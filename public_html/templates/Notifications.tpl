@@ -50,7 +50,7 @@
                         {foreach $myConvos as $messages}
                         <div class="row d-flex align-items-center" style="flex-direction: row">
                             <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
-                            <p class="col-6 messageOther">{$messages['message']}</p>
+                            <p class="col-6 messageOther">{$messages}</p>
                         </div>
                         {/foreach}
                     </div>
