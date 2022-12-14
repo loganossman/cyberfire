@@ -7,8 +7,6 @@ session_start();
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
-$_SESSION["passcode"] = rand(100000, 999999);
-echo($_SESSION["passcode"]);
 if(!isset($_POST["passcodeEntry"])){
     $smarty->display("passcode.tpl");
     echo($_SESSION["passcode"]);
@@ -18,4 +16,6 @@ elseif($_POST["passcodeEntry"] == strval($SESSION["passcode"])){
 }
 else{
     echo "this is not the code";
+    $_SESSION["passcode"] = rand(100000, 999999);
+    echo($_SESSION["passcode"]);
 }
