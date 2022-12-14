@@ -26,7 +26,7 @@ foreach ($messageTable as $messages){
         else{
             $their_id = $messages["sender_id"];
         }
-        foreach ($messageTable as $singleConvo){
+        foreach ($stmt as $singleConvo){
             if(($singleConvo["sender_id"] ==  $_SESSION["myID"] and $singleConvo["receiver_id"] == $their_id) or ($singleConvo["receiver_id"] ==  $_SESSION["myID"] and $singleConvo["sender_id"] == $their_id)){
                 $conversation[] = $singleConvo["message"];
                 echo($singleConvo["message"]);
