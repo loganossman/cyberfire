@@ -15,7 +15,7 @@ $messageTable = $stmt->fetch();
 $blackList = [];
 $conversationContainer = [];
 echo("boom baby <br>");
-echo($stmt[0]);
+echo($sql);
 foreach ($messageTable as $messages){
     if(!((in_array($messages["sender_id"], $blackList)) or (in_array($messages["receiver_id"], $blackList)))){
         $conversation = [];
