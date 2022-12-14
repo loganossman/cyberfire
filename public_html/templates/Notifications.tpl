@@ -27,43 +27,50 @@
             <p style="font-size:36px; font-style: normal; height:20%; padding: 1% 0% 0% 2%">Notifications</p>
             <div style="height: 80%">
                 <!--Inline style used to override row gutter-->
-            <div class="paddingMeBoyMeBob">
-                <button type="button" class="row messageCont d-flex align-items-center" style="--bs-gutter-x: 0" onclick="open{$accumulator}()">
-                    <div class="col-2 d-flex align-items-center"><img src="img/circle-32.png" alt="gray circle" class="profileImg"></img>Jim(Employee)</div>
-                    <div class="col-6"><p class="message"><img src="img/greenCircle-16.png" alt="green circle" class="profileImg">(jim):Hey can i have the day off tommorow my car broke...</p></div>
-                    <div class="col-2"><p style="float:right">9:32 am</p></div>
-                    <div class="col-2"><p style="float:left; padding-left: 15px">Today</p></div>
-                </button>
+                <div class="paddingMeBoyMeBob">
+                    <button type="button" class="row messageCont d-flex align-items-center" style="--bs-gutter-x: 0" onclick="open{$accumulator}()">
+                        <div class="col-2 d-flex align-items-center"><img src="img/circle-32.png" alt="gray circle" class="profileImg"></img>Jim(Employee)</div>
+                        <div class="col-6"><p class="message"><img src="img/greenCircle-16.png" alt="green circle" class="profileImg">(jim):Hey can i have the day off tommorow my car broke...</p></div>
+                        <div class="col-2"><p style="float:right">9:32 am</p></div>
+                        <div class="col-2"><p style="float:left; padding-left: 15px">Today</p></div>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="exampleModal{$accumulator}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" style="max-width: 300%; width: 60%; margin-top: 5%;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"><img src="img/circle-32.png" alt="gray circle" class="profileImg"> Jim</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        {foreach $myConvos as $messages}
-                        <div class="row d-flex align-items-center" style="flex-direction: row">
-                            <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
-                            <p class="col-6 messageOther">{$messages}</p>
-                        </div>
-                        {/foreach}
+        <div class="modal fade" id="exampleModal{$accumulator}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 300%; width: 60%; margin-top: 5%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"><img src="img/circle-32.png" alt="gray circle" class="profileImg"> Jim</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </div>
-                <div class="modal-footer" style="align-items: center; border-top:none;">
-                    <div style="height: 100%; width: 100%; border-style: solid; border-width: 1px;">
-                        <p style="padding-left: 1%">text...</p>
+                    <div class="modal-body">
+                        <div>
+                            {foreach $myConvos as $messages}
+                                {if $idUser == $messages["sender_id"]}
+                                    <div class="row d-flex align-items-center" style="flex-direction: row">
+                                        <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
+                                        <p class="col-6 messageOther">{$messages["message"]}</p>
+                                    </div>
+                                {else}
+                                    <div class="row d-flex align-items-center" style="flex-direction: row-reverse; margin-top: 3%; margin-bottom: 3%; ">
+                                        <img src="img/circle-32.png" alt="gray circle" class="profileImg col-1">
+                                        <p class="col-6 messageMine">{$messages["message"]}</p>
+                                    </div>
+                                {/if}
+                            {/foreach}
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="align-items: center; border-top:none;">
+                        <div style="height: 100%; width: 100%; border-style: solid; border-width: 1px;">
+                            <p style="padding-left: 1%">text...</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <script>
         function open{$accumulator}(){
@@ -71,7 +78,7 @@
             console.log("Running");
         }
     </script>
-{$accumulator = $accumulator + 1}
+    {$accumulator = $accumulator + 1}
 {/foreach}
 
 </body>

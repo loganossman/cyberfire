@@ -35,7 +35,7 @@ foreach ($stmtCopy as $messages){
         echo($their_id);
         foreach ($stmtCopyTwo as $singleConvo){
             if(($singleConvo["sender_id"] ==  $_SESSION["myID"] and $singleConvo["receiver_id"] == $their_id) or ($singleConvo["receiver_id"] ==  $_SESSION["myID"] and $singleConvo["sender_id"] == $their_id)){
-                $conversation[] = $singleConvo["message"];
+                $conversation[] = $singleConvo;
             }
         }
         echo("Finished One Iteration");
@@ -49,7 +49,7 @@ foreach ($stmtCopy as $messages){
     }
 }
 
-
+$smarty->assign("idUser", $_SESSION["myID"]);
 $smarty->assign("accumulator", 0);
 $smarty->assign("convo", $conversationContainer);
 $smarty->display("Notifications.tpl");
