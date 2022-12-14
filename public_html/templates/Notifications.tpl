@@ -18,15 +18,16 @@
     </nav>
     <a class="cta" href="login.php"><button>Logout</button></a>
 </header>
+{echo($convo)}
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 {foreach $convo as $myConvos}
-<div class ="contentContainer">
-    <div class ="view">
-        <p style="font-size:36px; font-style: normal; height:20%; padding: 1% 0% 0% 2%">Notifications</p>
-        <div style="height: 80%">
-            <!--Inline style used to override row gutter-->
+    <div class ="contentContainer">
+        <div class ="view">
+            <p style="font-size:36px; font-style: normal; height:20%; padding: 1% 0% 0% 2%">Notifications</p>
+            <div style="height: 80%">
+                <!--Inline style used to override row gutter-->
             <div class="paddingMeBoyMeBob">
                 <button type="button" class="row messageCont d-flex align-items-center" style="--bs-gutter-x: 0" onclick="open{$accumulator}()">
                     <div class="col-2 d-flex align-items-center"><img src="img/circle-32.png" alt="gray circle" class="profileImg"></img>Jim(Employee)</div>
@@ -36,7 +37,6 @@
                 </button>
             </div>
         </div>
-
     </div>
 
     <div class="modal fade" id="exampleModal{$accumulator}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
