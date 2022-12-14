@@ -11,8 +11,11 @@ $sql = "SELECT * FROM message WHERE sender_id = " . $_SESSION["myID"] . " OR rec
 $stmt = $pdo->prepare($sql);
 $stmt->execute();
 $stmtCopy = $stmt;
-$secondStmtCopy = $stmt;
-$thirdStmtCopy = $secondStmtCopy;
+
+$secondSql = "SELECT * FROM message WHERE sender_id = " . $_SESSION["myID"] . " OR receiver_id = " . $_SESSION["myID"];
+$secondStmt = $pdo->prepare($sql);
+$secondStmt->execute();
+$stmtCopyTwo = $secondStmt;
 
 $blackList = [];
 $conversationContainer = [];
@@ -30,7 +33,7 @@ foreach ($stmtCopy as $messages){
             $their_id = $messages["sender_id"];
         }
         echo($their_id);
-        foreach ($thirdStmtCopy as $singleConvo){
+        foreach ($stmtCopyTwo as $singleConvo){
             if(($singleConvo["sender_id"] ==  $_SESSION["myID"] and $singleConvo["receiver_id"] == $their_id) or ($singleConvo["receiver_id"] ==  $_SESSION["myID"] and $singleConvo["sender_id"] == $their_id)){
                 $conversation[] = $singleConvo["message"];
             }
