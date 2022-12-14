@@ -26,10 +26,10 @@ foreach ($messageTable as $messages){
         else{
             $their_id = $messages["sender_id"];
         }
-        foreach ($stmt as $singleConvo){
+        foreach ($messageTable as $singleConvo){
             echo("somethin's cookin' <br>");
             if(($singleConvo["sender_id"] ==  $_SESSION["myID"] and $singleConvo["receiver_id"] == $their_id) or ($singleConvo["receiver_id"] ==  $_SESSION["myID"] and $singleConvo["sender_id"] == $their_id)){
-                $conversation[] = $singleConvo;
+                $conversation[] = $singleConvo["message"];
             }
         }
         if($messages["sender_id"] == $_SESSION["myID"]){
