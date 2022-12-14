@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-12-13 17:57:14
+/* Smarty version 4.2.1, created on 2022-12-14 14:28:15
   from 'C:\Apache24\htdocs\cyberfire\public_html\templates\employeeVerification.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6399034a6fdeb2_17783984',
+  'unifunc' => 'content_639a23cf231068_43005533',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f08c848bac92979d5185e6a497279e9c640797e7' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\cyberfire\\public_html\\templates\\employeeVerification.tpl',
-      1 => 1669925432,
+      1 => 1671046092,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6399034a6fdeb2_17783984 (Smarty_Internal_Template $_smarty_tpl) {
+function content_639a23cf231068_43005533 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,8 +45,12 @@ function content_6399034a6fdeb2_17783984 (Smarty_Internal_Template $_smarty_tpl)
                         <input type="lastName" id="lastName" name="lastName" class="form-control" required>
                     </div>
                     <div class =" txt_feild">
-                        <label>Date of Birth</label>
-                        <input type="date" id="DOB" name="DOB" class="form-control" required>
+                        <label>Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class =" txt_feild">
+                        <label>Username</label>
+                        <input type="username" id="username" name="username" class="form-control" required>
                     </div>
                     <div class =" txt_feild">
                         <label>Enter Verification Password</label>
