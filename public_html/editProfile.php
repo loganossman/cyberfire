@@ -6,6 +6,30 @@
 include "../private_html/config.php";
 include PRIVATE_PATH . "db.inc.php";
 
+    $sql = "SELECT first_name FROM employee WHERE email='" . $_SESSION["email"] . "'";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+    $firstName = $stmt->fetch();
+
+    $sql2 = "SELECT last_name FROM employee WHERE email='" . $_SESSION["email"] . "'";
+    $stmt2 = $pdo->prepare($sql2);
+    $stmt2->execute();
+    $lastName = $stmt2->fetch();
+
+    $wholeName = $firstName[0] . " " . $lastName[0];
+
+    $sql3 = "SELECT email FROM employee WHERE email='" . $_SESSION["email"] . "'";
+    $stmt3 = $pdo->prepare($sql3);
+    $stmt3->execute();
+    $email = $stmt3->fetch();
+    $email1 = $email[0];
+
+
+//    $workEmail = $emails[0];
+
+    $smarty->assign("email1", $email1);
+    $smarty->assign("wholeName", $wholeName);
+
     if (isset($_POST['cancel'])) {
         header("Location: profile.php");
         exit();
@@ -15,20 +39,19 @@ include PRIVATE_PATH . "db.inc.php";
         $last = $_POST['LastName'];
         $userName = $_POST['username'];
         $profile = $_POST['File'];
-//            "<img src='C:\Users\mcgil\Pictures\profile.jpg' alt='img' />";
 
         if(empty($email) && empty($first) && empty($last) && empty($userName)){
-            echo '<script>alert("Please fill out entire form")</script>';
+            $smarty -> assign("error","empty");
         }else if (!preg_match('/^[a-zA-Z]*$/', $first) || !preg_match('/^[a-zA-Z]*$/', $last)){
-            echo '<script>alert("Invalid name")</script>';
+            $smarty -> assign("error1","spelled incorrect");
         }else if(preg_match('/^[0-9]{10}[a-zA-Z]+$/', $userName)) {
-            echo '<script>alert("Invalid username")</script>';
+            $smarty -> assign("error2","Invalid Username");
         }else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-            echo '<script>alert("invalid email")</script>';
+            $smarty -> assign("error3","Invalid Email");
         }else{
             $sql = "UPDATE employee SET profile_img = '$profile',email = '$email',
                     username = '$userName', first_name = '$first', last_name = '$last'
-                    WHERE password = 'abcd' ";
+                    WHERE email = '" . $_SESSION["email"] . "' ";
             $stmt = $pdo->prepare($sql);
             $stmt->execute();
             header("Location: success.php");

@@ -1,4 +1,11 @@
-
+:root {
+    --primary-color: #2380C4;
+    --secondary-color: #FFFFFF;
+    --tertiary-color: #E03E4C;
+    --quaternary-color: #585757;
+    --hover-color:rgba(225,225,225,.3);
+    --cal:#ae4545;
+}
 .calander{
     width: 100%;
     padding: 0vh 2vh;
@@ -116,7 +123,7 @@ background-color: rgba(224, 62, 76, 0.666);    font-weight: 1000;
     flex-direction:row;
 }
 .red{
-    background-color: #ae4545;
+    background-color: var(--cal);
 }
 .green{
     background-color: #3f943c;

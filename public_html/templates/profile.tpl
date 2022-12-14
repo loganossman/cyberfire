@@ -31,9 +31,8 @@
                 <h1>{$wholeName}</h1>
                 </div>
                 <div style="float:right;">
-                <p>DoB: 4/20/1969</p>
-                <p>123 Stinky Street</p>
-                <p>1-800-420-6969</p>
+                <p>{$username}</p>
+                <p>{$email}</p>
                 <button style="background-color: #E03E4C; margin: 10px"><a class="cta" href="editProfile.php" style="color: black">Edit</a></button>
                 </div>
             </div>

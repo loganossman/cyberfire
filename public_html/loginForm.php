@@ -16,7 +16,9 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $hashword = hash("md5", $password, false);
+
     $_SESSION["email"] = $email;
+
 
     // check if email matches an email in Employee table
     $sql = "SELECT username FROM employee WHERE email='" . $email . "'";
@@ -29,7 +31,7 @@ if (isset($_POST['submit'])) {
     $stmt2->execute();
     $pass = $stmt2->fetch();
     $passCheck = password_verify($password, $pass[0]);
-    
+
     if ($hashword == $pass[0] and $user) {
         $sql3 = "SELECT user_id FROM employee WHERE email = '" . $email . "'";
         $stmt3 = $pdo->prepare($sql3);
@@ -37,6 +39,7 @@ if (isset($_POST['submit'])) {
         $userID = $stmt3->fetch();
         $_SESSION["myID"] = $userID["user_id"];
         $smarty->display("EmployeeSchedule.tpl");
+
     } else {
         //echo '<script>alert("Incorrect email or password")</script>';
         $smarty->assign("error", "<p style=" . "color:red;" . ">Incorrect email or password!</p>");
