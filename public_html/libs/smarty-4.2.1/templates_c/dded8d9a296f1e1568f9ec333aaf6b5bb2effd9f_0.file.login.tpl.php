@@ -5,14 +5,14 @@
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_639a106b210177_28388760',
+  'unifunc' => 'content_639a109b505532_45000967',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'dded8d9a296f1e1568f9ec333aaf6b5bb2effd9f' => 
     array (
       0 => 'C:\\Apache24\\htdocs\\cyberfire\\public_html\\templates\\login.tpl',
-      1 => 1671041127,
+      1 => 1671041147,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_639a106b210177_28388760 (Smarty_Internal_Template $_smarty_tpl) {
+function content_639a109b505532_45000967 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,9 +57,6 @@ function content_639a106b210177_28388760 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="New">
                     <a href="emailReEntry.php" style="text-decoration: none;">Forgot Password <span style="color: rgba(224,62,76,.69)">Click here!</span></a>
-                </div>
-                <div class="footer">
-                    <p>If you are have trouble logging in please try resetting password. If that doesnt work please email cisdummy2022@gmail.com or contact your Manager</p>
                 </div>
             </div>
         </div>

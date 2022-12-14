@@ -36,6 +36,10 @@
                 </div>
             </div>
             <div class="avalability">
+            
+            <form action="/action_page.php" method="post">
+
+            
                 <div class = "a">
                     <h2>Location: </h2>
                     <input  class="input" type="checkbox" id="location 1" name="HRC" value="null">
@@ -59,6 +63,8 @@
                     <input class="input" type="checkbox" id="nonactive" name="Not Active(Defualt)" value="null">
                     <tag>Not Active (Defualt)</tag>
                 </div>
+                <button type="submit" value="submit">Submit</button>
+            </form>
             </div>
         </div>
     </div>
