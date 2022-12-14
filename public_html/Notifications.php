@@ -40,7 +40,7 @@ foreach ($messageTable as $messages){
     }
 }
 
-echo($conversationContainer);
+echo($conversationContainer[0]);
 $smarty->assign("accumulator", 0);
 $smarty->assign("convo", $conversationContainer);
 $smarty->display("Notifications.tpl");
