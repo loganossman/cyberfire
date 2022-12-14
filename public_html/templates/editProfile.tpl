@@ -22,12 +22,12 @@
               <div class="account-settings">
                 <div class="user-profile">
                   <div class="user-avatar">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" id="picture">
+                    <img src= "img/pfp.png" id="picture">
                     <input type="file" class="form-control" id="form" accept="image/*" name="File"
                            onchange="loadFile(event)">
                   </div>
-                  <h5 class="user-name">Yuki Hayashi</h5>
-                  <h6 class="user-email">yuki@Maxwell.com</h6>
+                  <h5 class="user-name">{$wholeName}</h5>
+                  <h6 class="user-email">{$email1}</h6>
                 </div>
               </div>
           </div>
@@ -78,6 +78,11 @@
                       {if isset ($error)}
                         <div class = "alert alert-danger">
                           {$error}
+                        </div>
+                      {/if}
+                      {if isset ($error3)}
+                        <div class = "alert alert-danger">
+                          {$error3}
                         </div>
                       {/if}
                     </div>
