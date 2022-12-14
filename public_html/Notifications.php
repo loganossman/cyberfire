@@ -17,6 +17,7 @@ $conversationContainer = [];
 
 foreach ($messageTable as $messages){
     if(!((in_array($messages["sender_id"], $blackList)) or (in_array($messages["receiver_id"], $blackList)))){
+        echo("boom baby <br>");
         $conversation = [];
         $their_id = "";
         if($messages["sender_id"] ==  $_SESSION["myID"]){
@@ -26,6 +27,7 @@ foreach ($messageTable as $messages){
             $their_id = $messages["sender_id"];
         }
         foreach ($messageTable as $singleConvo){
+            echo("somethin's cookin' <br>")
             if(($singleConvo["sender_id"] ==  $_SESSION["myID"] and $singleConvo["receiver_id"] == $their_id) or ($singleConvo["receiver_id"] ==  $_SESSION["myID"] and $singleConvo["sender_id"] == $their_id)){
                 $conversation[] = $singleConvo;
             }
@@ -40,7 +42,7 @@ foreach ($messageTable as $messages){
     }
 }
 
-echo($conversationContainer[0]);
+
 $smarty->assign("accumulator", 0);
 $smarty->assign("convo", $conversationContainer);
 $smarty->display("Notifications.tpl");
