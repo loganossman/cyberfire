@@ -27,11 +27,12 @@ foreach ($messageTable as $messages){
             $their_id = $messages["sender_id"];
         }
         foreach ($messageTable as $singleConvo){
-            echo("somethin's cookin' <br>");
             if(($singleConvo["sender_id"] ==  $_SESSION["myID"] and $singleConvo["receiver_id"] == $their_id) or ($singleConvo["receiver_id"] ==  $_SESSION["myID"] and $singleConvo["sender_id"] == $their_id)){
                 $conversation[] = $singleConvo["message"];
+                echo($singleConvo["message"]);
             }
         }
+        echo("Finished One Iteration");
         if($messages["sender_id"] == $_SESSION["myID"]){
             $blackList[] = $messages["sender_id"];
         }
