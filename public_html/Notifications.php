@@ -35,7 +35,7 @@ foreach ($stmtCopy as $messages){
             }
         }
         
-        $blackList = $their_id;
+        $blackList[] = $their_id;
         
         $conversationContainer[] = $conversation;
     }
