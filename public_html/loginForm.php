@@ -30,12 +30,15 @@ if (isset($_POST['submit'])) {
     $stmt2->execute();
     $pass = $stmt2->fetch();
     $passCheck = password_verify($password, $pass[0]);
+    echo $passCheck;
+    echo $pass[0];
 
     if ($hashword == $pass[0] and $user) {
         $sql3 = "SELECT user_id FROM employee WHERE email = '" . $email . "'";
         $stmt3 = $pdo->prepare($sql3);
         $stmt3->execute();
         $userID = $stmt3->fetch();
+        echo "huh";
         $_SESSION["myID"] = $userID["user_id"];
         $smarty->display("EmployeeSchedule.tpl");
 
